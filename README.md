@@ -8,8 +8,12 @@ High level description of human visual perception and computer graphics, includi
 
 Career Day presentation about Engineering to middle school students.
 
+### [Scratching SQL For Poké Power](./ScratchingSQLForPokePower.pdf)
+
+Lightweight introduction to SQL and data exploration using Pokémon data.
+
 ----
 
 ## LICENSE
 
-Copyright (c) 2018-2023 Evan Wies.  All rights reserved.
+Copyright (c) 2018-2025 Evan Wies.  All rights reserved.  Made with :heart: and :fire:.
