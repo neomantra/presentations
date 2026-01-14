@@ -126,3 +126,29 @@ on the vibe coding for kids page, i want you to use the images in the images dir
 ## 2026-01-14T02:41:35Z
 
 on the vibe baot engineering, add a boat emjoji to the slide title, but not the timeline.  add the images in the images directory: WeaselToonBowUpgrade.png  vibe-engineering-1.png vibe-engineering-2.png
+
+---
+
+## 2026-01-14T02:55:30Z
+
+make an analysis of how long this presentation will take.  don't make assumptions about my time limits
+
+---
+
+## 2026-01-14T03:00:22Z
+
+Keep everything for it but hide the artistic license slide, i will unhide it later in my process
+
+---
+
+## 2026-01-14T03:54:48Z
+
+we are continuing working on this presentation but we lost context.  review the directory
+
+---
+
+## 2026-01-14T03:56:55Z
+
+i got it working on github pages at https://neomantra.github.io/presentations/GolangMeetupJan2026/presentation.html
+i think we should rename presentation.html to index.html so it's picked up better.
+also it doesn't work well on mobile, can you see if you can improve that at all?

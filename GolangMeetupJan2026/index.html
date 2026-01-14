@@ -363,6 +363,179 @@
             color: #4a9eff;
             text-decoration: none;
         }
+
+        /* Mobile Responsive Styles */
+        @media (max-width: 768px) {
+            .timeline {
+                width: calc(100% - 40px);
+                left: 20px;
+                right: 20px;
+                top: 10px;
+            }
+
+            .timeline-icon {
+                font-size: 14px;
+            }
+
+            .slide {
+                padding: 20px 20px 80px;
+            }
+
+            .slide.active {
+                padding-top: 70px;
+                overflow-y: auto;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+                margin-bottom: 0.5em;
+            }
+
+            .title-slide h1 {
+                font-size: 2.2em;
+            }
+
+            .subtitle {
+                font-size: 1.2em;
+            }
+
+            p, li {
+                font-size: 1.1em;
+                line-height: 1.4;
+            }
+
+            .slide-media {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            .slide-media img,
+            .slide-media video {
+                max-height: 120px;
+                max-width: calc(50% - 10px);
+            }
+
+            .slide-links {
+                position: relative;
+                bottom: auto;
+                left: auto;
+                right: auto;
+                margin-top: 1em;
+                font-size: 0.8em;
+            }
+
+            .slide-links a {
+                display: block;
+                margin-bottom: 0.3em;
+                word-break: break-all;
+            }
+
+            .takeaway {
+                padding: 12px 16px;
+                margin-top: 0.5em;
+            }
+
+            .takeaway p {
+                font-size: 1em;
+            }
+
+            .nav {
+                bottom: 10px;
+                right: 10px;
+                gap: 5px;
+            }
+
+            .nav button {
+                padding: 8px 12px;
+                font-size: 12px;
+            }
+
+            .slide-counter {
+                bottom: 15px;
+                left: 10px;
+                font-size: 12px;
+            }
+
+            .threads-grid {
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+
+            .threads-grid li {
+                font-size: 1em;
+            }
+
+            .milestone .title {
+                font-size: 1.1em;
+            }
+
+            .milestone .desc {
+                font-size: 0.9em;
+            }
+
+            .date-tag {
+                font-size: 0.8em;
+                padding: 3px 8px;
+            }
+
+            /* Fix flex layout on slides with side images */
+            .slide > div[style*="display: flex"] {
+                flex-direction: column !important;
+            }
+
+            .slide > div[style*="display: flex"] img {
+                max-height: 100px;
+                margin-top: 1em;
+            }
+
+            body.show-notes .presenter-notes {
+                bottom: 50px;
+                max-height: 100px;
+                font-size: 12px;
+                padding: 10px;
+            }
+        }
+
+        /* Extra small screens */
+        @media (max-width: 480px) {
+            .timeline {
+                font-size: 10px;
+            }
+
+            .timeline-bar {
+                height: 8px;
+            }
+
+            .timeline-icon {
+                font-size: 12px;
+            }
+
+            .slide.active {
+                padding-top: 60px;
+            }
+
+            h1 {
+                font-size: 1.6em;
+            }
+
+            h2 {
+                font-size: 1.3em;
+            }
+
+            p, li {
+                font-size: 1em;
+            }
+
+            .slide-media img,
+            .slide-media video {
+                max-height: 80px;
+                max-width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -658,8 +831,8 @@
             </aside>
         </div>
 
-        <!-- Slide 11: Artistic License -->
-        <div class="slide" data-timeline="100">
+        <!-- Slide 11: Artistic License (HIDDEN - remove data-hidden to show) -->
+        <div class="slide" data-timeline="100" data-hidden="true" style="display: none !important;">
             <span class="date-tag">January 2026</span>
             <h2>Artistic License</h2>
             <ul>
@@ -802,6 +975,38 @@
                 toggleNotes();
             }
         });
+
+        // Touch swipe support for mobile
+        let touchStartX = 0;
+        let touchStartY = 0;
+        let touchEndX = 0;
+        let touchEndY = 0;
+
+        document.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+            touchStartY = e.changedTouches[0].screenY;
+        }, false);
+
+        document.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            touchEndY = e.changedTouches[0].screenY;
+            handleSwipe();
+        }, false);
+
+        function handleSwipe() {
+            const diffX = touchEndX - touchStartX;
+            const diffY = touchEndY - touchStartY;
+            const minSwipeDistance = 50;
+
+            // Only handle horizontal swipes (ignore vertical scrolling)
+            if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > minSwipeDistance) {
+                if (diffX < 0) {
+                    nextSlide(); // Swipe left = next
+                } else {
+                    prevSlide(); // Swipe right = prev
+                }
+            }
+        }
 
         showSlide(0);
     </script>

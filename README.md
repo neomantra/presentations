@@ -2,7 +2,9 @@
 
 ### [GolangMeetupJan2026](./GolangMeetupJan2026)
 
-My LLM journey of 2025
+My LLM journey of 2025.  It is a vibe-coded webapp itself and is lie at:
+
+ *  https://neomantra.github.io/presentations/GolangMeetupJan2026/
 
 ### [Introduction To Computer Graphics](./IntroToComputerGraphics.pdf)
 
