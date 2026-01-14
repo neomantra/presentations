@@ -647,3 +647,46 @@ sorry continue, i didn't mean to interrupt
 ## 2026-01-14T18:04:34Z
 
 that last summary output to a MEMORY.md file so you and i can refer to it later more easily.  You can note that MEMORY.md file in your CLAUDE.md.  I have one modification to the key narritive arc:  he slide should capture the "aha moment" - realizing that the bottleneck isn't the tool's power, but how well you describe it to the LLM, and you can use the LLM to help you do that"
+
+---
+
+## 2026-01-14T18:16:57Z
+
+i have some tweaks to do, but how about you incoporate what you glean from the MEMORY.md , we will call the "MCP Agent Looping" slide "Self-improvement of MCP Server through Agentic Looping" and focus on that.  the bullet points are mostly there
+
+---
+
+## 2026-01-14T18:29:39Z
+
+for that slide, use a loop 🔄 emoji and add it to the timeline.  
+First bullet point should read: "Built screentime-mcp — querying macOS ScreenTime database (SQLite)"
+
+---
+
+## 2026-01-14T18:30:52Z
+
+On the industry milestones slide and progressions, the robot and loop emojis should not be visible
+
+---
+
+## 2026-01-14T18:32:39Z
+
+instead of a plug, the mcp should be a hammer (tool).  update that everywhere.  also on the wield slide, next to each item on the bottom, put the related emoji (multimodal=eyes, tools = hammer, loops = loop, vibe = dizzy)
+
+---
+
+## 2026-01-14T18:35:55Z
+
+on the wield page, instead of a single line stack the text+ emoji vertically
+
+---
+
+## 2026-01-14T18:36:22Z
+
+i guess the emojis can be on both sides of that
+
+---
+
+## 2026-01-14T18:38:08Z
+
+on mcp exploration, in safe mode it should be dink-mcp

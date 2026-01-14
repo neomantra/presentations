@@ -641,10 +641,11 @@
         </div>
         <div class="timeline-icons">
             <span class="timeline-icon" id="eyeballs-icon" data-pos="0" style="left: 0%;" title="Multimodal">👀</span>
-            <span class="timeline-icon" id="plug-icon" data-pos="4" style="left: 4%;" title="MCP Released">🔌</span>
+            <span class="timeline-icon" id="hammer-icon" data-pos="8" style="left: 8%;" title="MCP Released">🔨</span>
             <span class="timeline-icon" data-pos="16" style="left: 16%;" title="DeepSeek R1">🧠</span>
             <span class="timeline-icon" data-pos="21" style="left: 21%;" title="Claude Code">✴️</span>
-            <span class="timeline-icon" data-pos="35" style="left: 35%;" title="MCP Exploration">🤖</span>
+            <span class="timeline-icon" id="robot-icon" data-pos="35" style="left: 35%;" title="MCP Exploration">🤖</span>
+            <span class="timeline-icon" id="loop-icon" data-pos="43" style="left: 43%;" title="Agent Looping">🔄</span>
             <span class="timeline-icon" id="thumbs-down-icon" data-pos="50" style="left: 50%;" title="Vibe Coding Fail">👎</span>
             <span class="timeline-icon" data-pos="64" style="left: 64%;" title="Nano Banana">🍌</span>
             <span class="timeline-icon" data-pos="78" style="left: 78%;" title="Vibing">😵‍💫</span>
@@ -712,7 +713,7 @@
             <div class="milestones-container">
                 <div class="milestone" data-milestone-timeline="4">
                     <div class="date">November 25, 2024</div>
-                    <div class="title">🔌 Anthropic Releases <a href="https://modelcontextprotocol.io" target="_blank" class="highlight">MCP</a></div>
+                    <div class="title">🔨 Anthropic Releases <a href="https://modelcontextprotocol.io" target="_blank" class="highlight">MCP</a></div>
                     <div class="desc">Open standard for connecting LLMs to data and tools</div>
                 </div>
                 <div class="milestone" data-milestone-timeline="16">
@@ -753,8 +754,8 @@
                 <li style="margin-left: 1em;" class="safe-only"><span class="highlight">████plug-mcp</span> for device access</li>
                 <!-- NSFW mode: real buttplug-mcp -->
                 <li style="margin-left: 1em;" class="nsfw-only"><a href="https://github.com/ConAcademy/buttplug-mcp" target="_blank" class="highlight">buttplug-mcp</a> for device access</li>
-                <!-- Safe mode: dank-mcp without link -->
-                <li class="safe-only">Culminated in <span class="highlight">dank-mcp</span></li>
+                <!-- Safe mode: dink-mcp without link -->
+                <li class="safe-only">Culminated in <span class="highlight">dink-mcp</span></li>
                 <!-- NSFW mode: dank-mcp with link -->
                 <li class="nsfw-only">Culminated in <a href="https://github.com/AgentDank/dank-mcp" target="_blank" class="highlight">dank-mcp</a></li>
                 <!-- Safe mode: structured datasets -->
@@ -785,7 +786,7 @@
                 <a href="https://github.com/ConAcademy/buttplug-mcp" target="_blank" class="nsfw-only">github.com/ConAcademy/buttplug-mcp</a>
             </div>
             <aside class="presenter-notes safe-only">
-                MCP - Model Context Protocol - lets you expose data and tools to LLMs in a standardized way. dank-mcp was the fun one: structured registry data loaded into DuckDB, exposed through MCP. You could ask Claude questions about the data and it would write SQL queries. The big lesson: how you describe your tools matters more than how powerful they are. LLMs work best with well-structured interfaces.
+                MCP - Model Context Protocol - lets you expose data and tools to LLMs in a standardized way. dink-mcp was the fun one: structured registry data loaded into DuckDB, exposed through MCP. You could ask Claude questions about the data and it would write SQL queries. The big lesson: how you describe your tools matters more than how powerful they are. LLMs work best with well-structured interfaces.
             </aside>
             <aside class="presenter-notes nsfw-only">
                 MCP - Model Context Protocol - lets you expose data and tools to LLMs in a standardized way. dank-mcp was the fun one: Connecticut cannabis registry data loaded into DuckDB, exposed through MCP. You could ask Claude questions about products and it would write SQL queries. The big lesson: how you describe your tools matters more than how powerful they are. LLMs work best with well-structured interfaces.
@@ -795,21 +796,21 @@
         <!-- Slide 4: May 2025 - Agent Looping -->
         <div class="slide" data-timeline="43">
             <span class="date-tag">May 2025</span>
-            <h2>MCP Agent Looping</h2>
+            <h2>Self-improvement of MCP Server through Agentic Looping 🔄</h2>
             <ul>
-                <li>Developed <a href="https://github.com/AgentDank/screentime-mcp" target="_blank" class="highlight">screentime-mcp</a></li>
-                <li>Agentic loops: generate → test → improve</li>
-                <li>Used Charmbracelet Crush to develop MCPs...</li>
-                <li>...while improving Crush's MCP support</li>
+                <li>Built <a href="https://github.com/AgentDank/screentime-mcp" target="_blank" class="highlight">screentime-mcp</a> — querying macOS ScreenTime database (SQLite)</li>
+                <li>Pattern: Data → DuckDB → MCP → LLM (with verbose tool descriptions)</li>
+                <li>Agent loop: Claude queries → fails → informs better descriptions → self-corrects</li>
+                <li>Use the LLM itself to write better tool descriptions</li>
             </ul>
             <div class="takeaway">
-                <p>World knowledge + SQL = deterministic answers to iterate on</p>
+                <p>The bottleneck isn't tool power — it's <span class="key-phrase">tool description quality</span></p>
             </div>
             <div class="slide-links">
                 <a href="https://github.com/AgentDank/screentime-mcp" target="_blank">github.com/AgentDank/screentime-mcp</a>
             </div>
             <aside class="presenter-notes">
-                This is where things got meta. I was building MCP servers while using an MCP-enabled tool (Crush) that I was also contributing to. The key insight: LLMs have world knowledge but sometimes you need deterministic answers. SQL gives you that ground truth, then you can iterate with the LLM to refine queries and visualizations.
+                This is where the pattern crystallized. I built screentime-mcp to query my Mac's Screen Time data through SQL. The key insight: Claude would fail on queries, and those failures told me exactly how to improve the tool descriptions. Better descriptions led to Claude self-correcting. And here's the meta part — I used Claude to help write those tool descriptions based on the failure modes it encountered. I was also using Charmbracelet Crush to develop this while improving Crush's MCP support. The pattern Data→DuckDB→MCP→LLM with verbose SQL endpoint descriptions became my go-to architecture.
             </aside>
         </div>
 
@@ -1059,9 +1060,12 @@
         <!-- Slide 12: Conclusion -->
         <div class="slide final-slide" data-timeline="100" style="justify-content: center; align-items: center; text-align: center;">
             <h2>Wield this magic!<br>Use it to solve your problems...</h2>
-            <p style="margin-top: 2em; font-size: 1.3em; color: #888;">
-                Multi-modal Models • Tool Calling • Agentic Loops • Vibe Coding
-            </p>
+            <div style="margin-top: 2em; font-size: 1.3em; color: #888; display: flex; flex-direction: column; gap: 0.5em;">
+                <span>👀 Multi-modal Models 👀</span>
+                <span>🔨 Tool Calling 🔨</span>
+                <span>🔄 Agentic Loops 🔄</span>
+                <span>😵‍💫 Vibe Coding 😵‍💫</span>
+            </div>
             <div class="slide-links" style="position: relative; bottom: auto; left: auto; right: auto; margin-top: 3em; text-align: center;">
                 <a href="https://news.ycombinator.com/user?id=neomantra" target="_blank">news.ycombinator.com/user?id=neomantra</a>
                 <a href="https://github.com/NimbleMarkets" target="_blank">github.com/NimbleMarkets</a>
@@ -1143,13 +1147,19 @@
             const milestones = slides[currentSlide].querySelectorAll('.milestone');
             const thumbsDown = document.getElementById('thumbs-down-icon');
             const eyeballs = document.getElementById('eyeballs-icon');
-            const plug = document.getElementById('plug-icon');
+            const hammer = document.getElementById('hammer-icon');
+            const robot = document.getElementById('robot-icon');
+            const loop = document.getElementById('loop-icon');
 
-            // Hide thumbs down on industry milestones slide
+            // Hide thumbs down, robot, and loop on industry milestones slide
             if (milestones.length > 0) {
                 thumbsDown.style.display = 'none';
+                robot.style.display = 'none';
+                loop.style.display = 'none';
             } else {
                 thumbsDown.style.display = '';
+                robot.style.display = '';
+                loop.style.display = '';
             }
 
             // Hide eyeballs on title slide (slide 0)
@@ -1159,11 +1169,11 @@
                 eyeballs.style.display = '';
             }
 
-            // Hide plug until first milestone is revealed on Industry Milestones slide
+            // Hide hammer until first milestone is revealed on Industry Milestones slide
             if (currentSlide <= 1 || (milestones.length > 0 && milestoneStep === 0)) {
-                plug.style.display = 'none';
+                hammer.style.display = 'none';
             } else {
-                plug.style.display = '';
+                hammer.style.display = '';
             }
 
             if (milestones.length > 0) {
@@ -1214,7 +1224,7 @@
                 updateMilestoneLinks(currentMilestone);
                 // Show plug when first milestone is revealed
                 if (currentMilestone >= 1) {
-                    document.getElementById('plug-icon').style.display = '';
+                    document.getElementById('hammer-icon').style.display = '';
                 }
             } else {
                 showSlide(currentSlide + 1, 0);
@@ -1233,7 +1243,7 @@
                 } else {
                     updateTimeline(parseInt(slides[currentSlide].dataset.timeline) || 0);
                     // Hide plug when going back to no milestones
-                    document.getElementById('plug-icon').style.display = 'none';
+                    document.getElementById('hammer-icon').style.display = 'none';
                 }
             } else {
                 // Go to previous slide, showing all its milestones
