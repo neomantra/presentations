@@ -629,3 +629,21 @@ on the LLM-assisted Renaissance... capitolize the A in LLM-assisted.  Replace "T
 ## 2026-01-14T17:42:38Z
 
 go over the slides, make sure images flow properly for narrow windows and mobile
+
+---
+
+## 2026-01-14T17:55:06Z
+
+i need to work on the content for mcp agent looping and screentime MCP.  review my hackernews history for what i've talked about it and help me develop this slide.  you can start with suggestions.  i think it is an important slide for noting the evolution from MCP to agent loop to give better tool description to enable it to help better. the crush angle doesn't really matter, and can be in presenter notes as an anecdote in a longer talk particularly  
+
+---
+
+## 2026-01-14T17:59:23Z
+
+sorry continue, i didn't mean to interrupt
+
+---
+
+## 2026-01-14T18:04:34Z
+
+that last summary output to a MEMORY.md file so you and i can refer to it later more easily.  You can note that MEMORY.md file in your CLAUDE.md.  I have one modification to the key narritive arc:  he slide should capture the "aha moment" - realizing that the bottleneck isn't the tool's power, but how well you describe it to the LLM, and you can use the LLM to help you do that"

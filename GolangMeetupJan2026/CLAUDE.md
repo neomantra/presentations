@@ -10,6 +10,7 @@ This is a presentation project titled "LLM Odyssey 2025: From TUI Experiments to
 
 - **OUTLINE.md**: The main content outline with talk structure and topics
 - **AGENTS.md**: Instructions for Claude to create the presentation
+- **MEMORY.md**: Working notes and research for slide development (refer to this for context on specific slides)
 
 ## Task
 
