@@ -68,3 +68,61 @@ honestly how long would it take to present this, don't make any changes, just gi
 ## 2026-01-14T01:31:50Z
 
 go ahead and condense all the corporate announcements, including nano banana, into a quick set of sections that advance on the same slide and expose their milestones as they go.  then we jump to my work with MCP servers.
+
+---
+
+## 2026-01-14T01:52:00Z
+
+on the title page, you can put my name Evan Wies and my email evan@neomantra.net.
+
+on the TUI page, put the images using  href https://github.com/NimbleMarkets/ollamatea/blob/main/cmd/ot-simplegen/demo.gif
+https://github.com/NimbleMarkets/ollamatea/blob/main/cmd/ot-timechart/demo.gif 
+
+for MCP server page, put it on its own sub-line and instead of "DataBento" put "`dbn-go-mcp` for DataBento market data, and a sub-line `buttplug-mcp` for device access, add its Github link.  then dank-mcp gets its own line and the rest.
+embed https://github.com/NimbleMarkets/dbn-go/raw/main/cmd/dbn-go-mcp/claude_get_cost.png for dbn-go-mcp
+embed https://github.com/user-attachments/assets/adb8e56f-178d-4646-9e0f-4fcf57614dea for dank-mcp with it queued at second 00:22.
+
+that's enough for now
+
+---
+
+## 2026-01-14T02:18:15Z
+
+on the mcp  add this image of agentdank in images.
+on the antigravity page add the dank-webchat and dank-data-explorer images
+
+---
+
+## 2026-01-14T02:19:29Z
+
+on the ollamatea page, add https://raw.githubusercontent.com/NimbleMarkets/ollamatea/main/tests/ollamatea-512.png as the first image
+
+---
+
+## 2026-01-14T02:20:38Z
+
+put the ollamatea image to the right of the buleltpoints instead
+
+---
+
+## 2026-01-14T02:23:46Z
+
+next to agent dank you can put buttplug.io https://buttplug.io/assets/images/logo-38018d3af54f9cadbcfa380c51e63cb7.png
+
+---
+
+## 2026-01-14T02:30:54Z
+
+add the proving parallelograms and quadratic equations image
+
+---
+
+## 2026-01-14T02:33:05Z
+
+on the vibe coding for kids page, i want you to use the images in the images directory, proving-paralleograms.png and quadratic-explorer.png
+
+---
+
+## 2026-01-14T02:41:35Z
+
+on the vibe baot engineering, add a boat emjoji to the slide title, but not the timeline.  add the images in the images directory: WeaselToonBowUpgrade.png  vibe-engineering-1.png vibe-engineering-2.png

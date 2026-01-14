@@ -230,6 +230,25 @@
             gap: 0.5em;
         }
 
+        .slide-media {
+            display: flex;
+            gap: 20px;
+            margin-top: 1em;
+            justify-content: center;
+        }
+
+        .slide-media img {
+            max-height: 200px;
+            border-radius: 8px;
+            border: 1px solid #333;
+        }
+
+        .slide-media video {
+            max-height: 200px;
+            border-radius: 8px;
+            border: 1px solid #333;
+        }
+
         .code {
             font-family: 'SF Mono', 'Fira Code', monospace;
             background: #0d0d1a;
@@ -372,7 +391,8 @@
             <h1>My LLM Journey</h1>
             <p class="subtitle">From Experiments to Practical Work</p>
             <p style="margin-top: 2em; color: #666;">NYC Golang Meetup | January 2026</p>
-            <p style="color: #555; margin-top: 0.5em;">@neomantra</p>
+            <p style="color: #ccc; margin-top: 1em;">Evan Wies</p>
+            <p style="color: #888; margin-top: 0.3em;">evan@neomantra.net · @neomantra</p>
             <aside class="presenter-notes">
                 Welcome everyone. I'm going to share my journey over the past 14 months using LLMs - from early experiments with code generation and multi-modal models, to now using them for practical everyday work. Press 'N' to toggle these notes.
             </aside>
@@ -382,14 +402,22 @@
         <div class="slide" data-timeline="8">
             <span class="date-tag">November 2024</span>
             <h2>TUI + Multimodal Models 👀</h2>
-            <ul>
-                <li>Built <a href="https://github.com/NimbleMarkets/ollamatea" target="_blank" class="highlight">OllamaTea</a> - BubbleTea components for Ollama</li>
-                <li>Terminal UI meets local LLM inference</li>
-                <li>Combined with <span class="code">dbn-go</span> DataBento library</li>
-                <li>Created <a href="https://github.com/NimbleMarkets/ntcharts" target="_blank" class="highlight">NTCharts</a> multi-modal inferencing demo</li>
-            </ul>
-            <div class="takeaway">
-                <p>Bringing AI capabilities directly into the terminal workflow</p>
+            <div style="display: flex; gap: 40px; align-items: flex-start;">
+                <ul style="flex: 1;">
+                    <li>Built <a href="https://github.com/NimbleMarkets/ollamatea" target="_blank" class="highlight">OllamaTea</a> - BubbleTea components for Ollama</li>
+                    <li>Terminal UI meets local LLM inference</li>
+                    <li>Combined with <span class="code">dbn-go</span> DataBento library</li>
+                    <li>Created <a href="https://github.com/NimbleMarkets/ntcharts" target="_blank" class="highlight">NTCharts</a> multi-modal inferencing demo</li>
+                </ul>
+                <img src="https://raw.githubusercontent.com/NimbleMarkets/ollamatea/main/tests/ollamatea-512.png" alt="OllamaTea" style="max-height: 180px; border-radius: 8px;">
+            </div>
+            <div class="slide-media">
+                <a href="https://github.com/NimbleMarkets/ollamatea/blob/main/cmd/ot-simplegen/demo.gif" target="_blank">
+                    <img src="https://github.com/NimbleMarkets/ollamatea/raw/main/cmd/ot-simplegen/demo.gif" alt="ot-simplegen demo">
+                </a>
+                <a href="https://github.com/NimbleMarkets/ollamatea/blob/main/cmd/ot-timechart/demo.gif" target="_blank">
+                    <img src="https://github.com/NimbleMarkets/ollamatea/raw/main/cmd/ot-timechart/demo.gif" alt="ot-timechart demo">
+                </a>
             </div>
             <div class="slide-links">
                 <a href="https://github.com/NimbleMarkets/ollamatea" target="_blank">github.com/NimbleMarkets/ollamatea</a>
@@ -439,16 +467,28 @@
             <span class="date-tag">April 2025</span>
             <h2>MCP Exploration 🤖</h2>
             <ul>
-                <li>Built MCP servers: DataBento, buttplug-mcp</li>
+                <li>Built MCP servers:</li>
+                <li style="margin-left: 1em;"><a href="https://github.com/NimbleMarkets/dbn-go/tree/main/cmd/dbn-go-mcp" target="_blank" class="code">dbn-go-mcp</a> for DataBento market data</li>
+                <li style="margin-left: 1em;"><a href="https://github.com/agentdank/buttplug-mcp" target="_blank" class="code">buttplug-mcp</a> for device access</li>
                 <li>Culminated in <a href="https://github.com/AgentDank/dank-mcp" target="_blank" class="highlight">dank-mcp</a></li>
                 <li>Cannabis dataset queries via DuckDB + Claude</li>
             </ul>
+            <div class="slide-media">
+                <img src="images/AgentDankGravatar.png" alt="AgentDank">
+                <a href="https://buttplug.io" target="_blank">
+                    <img src="https://buttplug.io/assets/images/logo-38018d3af54f9cadbcfa380c51e63cb7.png" alt="buttplug.io">
+                </a>
+                <a href="https://github.com/NimbleMarkets/dbn-go/tree/main/cmd/dbn-go-mcp" target="_blank">
+                    <img src="https://github.com/NimbleMarkets/dbn-go/raw/main/cmd/dbn-go-mcp/claude_get_cost.png" alt="dbn-go-mcp demo">
+                </a>
+                <video src="https://github.com/user-attachments/assets/adb8e56f-178d-4646-9e0f-4fcf57614dea#t=22" autoplay loop muted></video>
+            </div>
             <div class="takeaway">
                 <p><span class="highlight">Learnings:</span> Tool descriptions are crucial. LLMs love structured markdown. APIs aren't always meant to be wrapped directly.</p>
             </div>
             <div class="slide-links">
+                <a href="https://github.com/NimbleMarkets/dbn-go/tree/main/cmd/dbn-go-mcp" target="_blank">github.com/NimbleMarkets/dbn-go/cmd/dbn-go-mcp</a>
                 <a href="https://github.com/AgentDank/dank-mcp" target="_blank">github.com/AgentDank/dank-mcp</a>
-                <a href="https://modelcontextprotocol.io" target="_blank">modelcontextprotocol.io</a>
             </div>
             <aside class="presenter-notes">
                 MCP - Model Context Protocol - lets you expose data and tools to LLMs in a standardized way. dank-mcp was the fun one: Connecticut cannabis registry data loaded into DuckDB, exposed through MCP. You could ask Claude questions about products and it would write SQL queries. The big lesson: how you describe your tools matters more than how powerful they are. LLMs work best with well-structured interfaces.
@@ -487,6 +527,10 @@
                 <li>3D WebGL charts of cannabis data</li>
                 <li>Built between train stops</li>
             </ul>
+            <div class="slide-media">
+                <img src="images/dank-webchat.png" alt="dank-webchat">
+                <img src="images/dank-data-explorer.png" alt="dank-data-explorer">
+            </div>
             <aside class="presenter-notes">
                 AntiGravity is my dev workflow tool. With the newer models, what used to take hours of iteration started working in one shot. That age verification page and chat interface that I struggled with before? Gemini one-shotted it. I even built a full DBA environment with DuckDB running in the browser and 3D charts - during a train commute. The capability jump was real.
             </aside>
@@ -503,6 +547,14 @@
                 <li><a href="https://github.com/ConAcademy/proving_parallelograms" target="_blank" class="highlight">Proving Parallelograms</a></li>
                 <li>Sprinkled inspiration about machine intelligence</li>
             </ul>
+            <div class="slide-media">
+                <a href="https://github.com/ConAcademy/quadratic_explorer" target="_blank">
+                    <img src="images/quadratic-explorer.png" alt="Quadratic Explorer">
+                </a>
+                <a href="https://github.com/ConAcademy/proving_parallelograms" target="_blank">
+                    <img src="images/proving-paralleograms.png" alt="Proving Parallelograms">
+                </a>
+            </div>
             <div class="slide-links">
                 <a href="https://github.com/ConAcademy/quadratic_explorer" target="_blank">github.com/ConAcademy/quadratic_explorer</a>
                 <a href="https://github.com/ConAcademy/proving_parallelograms" target="_blank">github.com/ConAcademy/proving_parallelograms</a>
@@ -540,7 +592,7 @@
         <!-- Slide 8: Late Dec 2025 - Boat Engineering -->
         <div class="slide" data-timeline="93">
             <span class="date-tag">Late December 2025</span>
-            <h2>Vibe Boat Engineering 😵‍💫</h2>
+            <h2>Vibe Boat Engineering 🚤</h2>
             <ul>
                 <li>Multimodal CAD assistance for pontoon boat improvement</li>
                 <li>Described issues + shared CAD drawings</li>
@@ -549,6 +601,11 @@
             <p style="font-size: 1.3em; margin-top: 0.5em;">
                 Structure configuration • Screw diameters • Materials selection • Stress point analysis
             </p>
+            <div class="slide-media">
+                <img src="images/WeaselToonBowUpgrade.png" alt="WeaselToon Bow Upgrade">
+                <img src="images/weaseltoon-engineering-1.png" alt="Vibe Engineering 1">
+                <img src="images/weaseltoon-engineering-2.png" alt="Vibe Engineering 2">
+            </div>
             <aside class="presenter-notes">
                 This was purely practical. I needed to improve something on my boat. I described the issue, shared pictures of the CAD drawings, and Claude helped me work through structural issues - what fasteners to use, material choices, where the stress points would be. Not writing code, just applying AI to a real engineering problem.
             </aside>
