@@ -862,3 +862,15 @@ remove "culminated in"
 ## 2026-01-14T21:45:50Z
 
 you can have it be the same indentation as the others
+
+---
+
+## 2026-01-14T22:59:40Z
+
+on the title page and final page, add the full URL https://neomantra.github.io/presentations/GolangMeetupJan2026/ in case people want to take a picture and type it.  the link should be active as well
+
+---
+
+## 2026-01-14T23:01:13Z
+
+make it larger, to be read from far away,  and include the https://
