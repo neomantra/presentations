@@ -617,3 +617,15 @@ on the title page and final page, put a bottom note that the presentation itself
 ## 2026-01-14T17:35:53Z
 
 reformulate the readme given the current slide structure.  note and link the MIT License in Author section.  The @neomantra should go to my GitHub
+
+---
+
+## 2026-01-14T17:40:52Z
+
+on the LLM-assisted Renaissance... capitolize the A in LLM-assisted.  Replace "This presentation" with the same styled "This Presentation" then "... (PROMPTS.md)" where the PROMPTS.md is a styled link to https://github.com/neomantra/presentations/blob/master/GolangMeetupJan2026/PROMPTS.md .. the ellipsis and parentheses remain unstyled
+
+---
+
+## 2026-01-14T17:42:38Z
+
+go over the slides, make sure images flow properly for narrow windows and mobile
