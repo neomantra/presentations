@@ -586,3 +586,9 @@ the long press is a pain, how about just double-tapping?
 ## 2026-01-14T17:20:23Z
 
 i want to make it that it is only when you triple-tap (or if that's not possible double-tap) the Notes button.
+
+---
+
+## 2026-01-14T17:23:34Z
+
+that's annoying too, because it can sometimes turn into a zoom -- what about tapping Notes and Full at the same time

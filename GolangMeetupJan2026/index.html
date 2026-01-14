@@ -1443,22 +1443,26 @@
             saveSettings();
         });
 
-        // Triple-tap detection on Notes button
+        // Simultaneous tap on Notes + Full buttons to open settings
         const notesBtn = document.getElementById('notes-btn');
-        let tapTimes = [];
-        const TAP_DELAY = 400;
+        const fullBtn = document.getElementById('fullscreen-btn');
+        let notesTapTime = 0;
+        let fullTapTime = 0;
+        const SIMULTANEOUS_THRESHOLD = 300;
 
-        notesBtn.addEventListener('click', function(e) {
-            const now = Date.now();
-            // Remove old taps outside the window
-            tapTimes = tapTimes.filter(t => now - t < TAP_DELAY * 2);
-            tapTimes.push(now);
-
-            if (tapTimes.length >= 3) {
-                e.preventDefault();
-                e.stopPropagation();
+        notesBtn.addEventListener('click', function() {
+            notesTapTime = Date.now();
+            if (Math.abs(notesTapTime - fullTapTime) < SIMULTANEOUS_THRESHOLD) {
                 openSettings();
-                tapTimes = [];
+                notesTapTime = fullTapTime = 0;
+            }
+        });
+
+        fullBtn.addEventListener('click', function() {
+            fullTapTime = Date.now();
+            if (Math.abs(fullTapTime - notesTapTime) < SIMULTANEOUS_THRESHOLD) {
+                openSettings();
+                notesTapTime = fullTapTime = 0;
             }
         });
 
