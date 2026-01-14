@@ -564,8 +564,10 @@
             <span class="timeline-icon" data-pos="16" style="left: 16%;" title="DeepSeek R1">🧠</span>
             <span class="timeline-icon" data-pos="21" style="left: 21%;" title="Claude Code">✴️</span>
             <span class="timeline-icon" data-pos="35" style="left: 35%;" title="MCP Exploration">🤖</span>
+            <span class="timeline-icon" id="thumbs-down-icon" data-pos="50" style="left: 50%;" title="Vibe Coding Fail">👎</span>
             <span class="timeline-icon" data-pos="64" style="left: 64%;" title="Nano Banana">🍌</span>
             <span class="timeline-icon" data-pos="78" style="left: 78%;" title="Vibing">😵‍💫</span>
+            <span class="timeline-icon" data-pos="100" style="left: 100%;" title="Renaissance">🚀</span>
         </div>
     </div>
 
@@ -700,6 +702,25 @@
             </aside>
         </div>
 
+        <!-- Slide: Jun 2025 - Take a Shot at Vibe Coding -->
+        <div class="slide" data-timeline="50">
+            <span class="date-tag">June 2025</span>
+            <h2>Take a Shot at Vibe Coding 👎</h2>
+            <ul>
+                <li>Vibe coding was getting popular</li>
+                <li>Already using Copilot auto-complete heavily</li>
+                <li>Constantly asking LLMs coding questions</li>
+                <li>Tried making AgentDank website — starting with age verification</li>
+                <li>Didn't concentrate on the code at all...</li>
+            </ul>
+            <div class="takeaway">
+                <p>After a few hours: nothing useful. Code I wasn't happy with. Felt <span class="highlight">behind my natural tempo</span>. Stopped — considering it <span class="highlight">not ready</span>.</p>
+            </div>
+            <aside class="presenter-notes">
+                Vibe coding was getting popular, and I was already leaning on Copilot and asking LLMs questions constantly. I tried to build an AgentDank website starting with an age verification screen, without really looking at the code. When I did look, I wasn't happy with it. After a few hours I had nothing useful and felt slower than my normal pace. I stopped, concluding the tools weren't ready yet.
+            </aside>
+        </div>
+
         <!-- Slide 5: Nov 2025 - New Models -->
         <div class="slide" data-timeline="78">
             <span class="date-tag">November 2025</span>
@@ -756,6 +777,14 @@
         <div class="slide" data-timeline="91">
             <span class="date-tag">Late December 2025</span>
             <h2>Multimodal Debugging</h2>
+            <p style="font-size: 1.3em; color: #ccc; margin-bottom: 0.3em;">Full debugging cycle from a screenshot</p>
+            <p style="font-size: 1.1em; color: #888; margin-bottom: 0.2em;">Simple input, harnessing:</p>
+            <ul style="margin-left: 2em; margin-bottom: 0.5em;">
+                <li style="font-size: 1em;"><span class="highlight">Multi-modal capability</span></li>
+                <li style="font-size: 1em;"><span class="highlight">World understanding</span></li>
+                <li style="font-size: 1em;"><span class="highlight">Tool calling</span></li>
+                <li style="font-size: 1em;"><span class="highlight">Agentic looping</span></li>
+            </ul>
             <div class="slide-media slide-media-large" style="align-items: center; margin-top: 0.5em;">
                 <a href="images/proving-parallelograms-bug.png" target="_blank">
                     <img src="images/proving-parallelograms-bug.png" alt="Bug: bowtie shape">
@@ -767,7 +796,7 @@
                     <img src="images/proving-parallelograms-bugfix.png" alt="Fixed: proper parallelogram">
                 </a>
             </div>
-            <p style="font-size: 1.1em; margin-top: 1em; color: #888;">
+            <p style="font-size: 1.1em; margin-top: 1em; color: #888; text-align: center;">
                 <span class="highlight">See image</span> →
                 <span class="highlight">Identify bug</span> →
                 <span class="highlight">Create fix</span> →
@@ -838,7 +867,7 @@
         <!-- Slide 10: Jan 2026 - Renaissance -->
         <div class="slide" data-timeline="100">
             <span class="date-tag">January 2026</span>
-            <h2>LLM-assisted Renaissance</h2>
+            <h2>LLM-assisted Renaissance 🚀</h2>
             <ul class="threads-grid">
                 <li><a href="https://github.com/NimbleMarkets/ntcharts/issues/7" target="_blank" class="highlight">NTCharts multimodal + terminal testing</a></li>
                 <li><a href="https://github.com/openresty/docker-openresty/issues/289" target="_blank" class="highlight">OSS devops: Travis → GitHub Actions</a></li>
@@ -951,6 +980,15 @@
 
             // Handle milestones
             const milestones = slides[currentSlide].querySelectorAll('.milestone');
+            const thumbsDown = document.getElementById('thumbs-down-icon');
+
+            // Hide thumbs down on industry milestones slide
+            if (milestones.length > 0) {
+                thumbsDown.style.display = 'none';
+            } else {
+                thumbsDown.style.display = '';
+            }
+
             if (milestones.length > 0) {
                 currentMilestone = milestoneStep;
                 milestones.forEach((m, i) => {

@@ -222,3 +222,55 @@ since it wraps around , put a slide with a FIN sign to demarcate the end of the 
 ## 2026-01-14T04:54:29Z
 
 it is not going fullscreen on my iphone... anything we can do about that?
+
+---
+
+## 2026-01-14T11:26:33Z
+
+on the multimodal debugging slide, add an inital text that say "Full debugging cycle from a screenshot"
+then the next line that says "Simple input, harnessing:"
+ * Multi-modal understanding
+ * Tool calling
+ * Agentic looping
+
+---
+
+## 2026-01-14T11:28:12Z
+
+you can take multiple indented lines for the bullet points afters harnessing
+
+---
+
+## 2026-01-14T11:33:45Z
+
+change "multi-modal understanding" to "multi-modal capability" and add a line for "world understanding" under it
+
+---
+
+## 2026-01-14T11:37:17Z
+
+on that page, center the "See image ->" line
+
+---
+
+## 2026-01-14T12:55:50Z
+
+Add a Jun 2025 slide Take a Shot at Vibe Coding.   Vibe coding was getting popular, I already used Copilot auto-complete heavily and was constantly asking the LLMs coding questions.  I tried to make an AgentDank website, starting with an age verification screen, without concentrating on the code at all.  When I did look at the code, I wasn't too happy with it.  After a few hours I still had nothing useful and felt behind what my natural tempo and I stopped, considering it not ready.
+
+---
+
+## 2026-01-14T13:22:39Z
+
+on that slide, put a thumbs down emoji to signify my failure.  add it to the timeline, but don't include it with the industry achievements reveal
+
+---
+
+## 2026-01-14T13:24:12Z
+
+on the industry milestones page can you hide the thumbs down in the timeline?
+
+---
+
+## 2026-01-14T13:25:31Z
+
+on the LLM-assisted renaissance page, add a rocketship emoji and also include it in the timeline
