@@ -474,3 +474,29 @@ On LLM-assisted renaissance, break the first line into two bullet points: "Now I
 ## 2026-01-14T15:47:35Z
 
 on that slide, fixup "dank-extract" to be a styled link.  change "HyperCube Vision + mesh shaders" to "HyperCube Viewer on Vision Pro via Mesh Shading"
+
+---
+
+## 2026-01-14T15:54:32Z
+
+ON "AntiGravity" slide.  Italicize "One-shot" in both occurences, but do not make it gold.  between the two one-shot bullets, add a bullet "Then free to vibe new features..."   .  change "Then vibed 3D WebGL charts of query results".  Change "built between train stops" to "Built between meetings and commutes"
+
+---
+
+## 2026-01-14T16:07:18Z
+
+the QR codes should each hyperlink to their respective links, using the same link behaviors as others
+
+---
+
+## 2026-01-14T16:18:49Z
+
+on "Vibe Coding for kids" also include links at the bottom for the project GitHub Pages:
+https://conacademy.github.io/quadratic_explorer/
+https://conacademy.github.io/proving_parallelograms/
+
+---
+
+## 2026-01-14T16:20:39Z
+
+On the Wield this magic page.  let's change the bottom tagline to highlight the key technologies: "Multi-modal Models * Tool Calling * Agentic Loops * Vibe Coding"
