@@ -836,3 +836,10 @@ let's skip that, please remove the svg.  update the presenter notes related to t
 ## 2026-01-14T20:55:56Z
 
 summarize the talk duration with safemode disabled and fallthrough enabled.  update the README as well
+
+---
+
+## 2026-01-14T21:25:28Z
+
+remove "No footguns allowed."
+"Never fully released" to "Never released binaries"
