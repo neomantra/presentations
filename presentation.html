@@ -84,14 +84,40 @@
         .slide {
             display: none;
             flex: 1;
-            padding: 60px 80px;
+            padding: 60px 80px 100px;
             animation: fadeIn 0.5s ease;
         }
 
         .slide.active {
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start;
+            padding-top: 80px;
+        }
+
+        .slide-links {
+            position: absolute;
+            bottom: 70px;
+            left: 80px;
+            right: 80px;
+            font-size: 0.95em;
+            color: #666;
+        }
+
+        .slide-links a {
+            color: #4a9eff;
+            text-decoration: none;
+            margin-right: 2em;
+            transition: color 0.2s;
+        }
+
+        .slide-links a:hover {
+            color: #00d4aa;
+        }
+
+        .slide-links::before {
+            content: "→ ";
+            color: #444;
         }
 
         @keyframes fadeIn {
@@ -151,6 +177,22 @@
         .highlight {
             color: #00d4aa;
             font-weight: 600;
+        }
+
+        a.highlight {
+            text-decoration: none;
+        }
+
+        a.highlight:hover {
+            text-decoration: underline;
+        }
+
+        a.code {
+            text-decoration: none;
+        }
+
+        a.code:hover {
+            text-decoration: underline;
         }
 
         .code {
@@ -280,8 +322,11 @@
         </div>
         <div class="timeline-icons">
             <span class="timeline-icon" data-pos="0" style="left: 0%;" title="Multimodal">👀</span>
+            <span class="timeline-icon" data-pos="4" style="left: 4%;" title="MCP Released">🔌</span>
+            <span class="timeline-icon" data-pos="16" style="left: 16%;" title="DeepSeek R1">🧠</span>
             <span class="timeline-icon" data-pos="21" style="left: 21%;" title="Claude Code">✴️</span>
-            <span class="timeline-icon" data-pos="35" style="left: 35%;" title="MCP">🤖</span>
+            <span class="timeline-icon" data-pos="35" style="left: 35%;" title="MCP Exploration">🤖</span>
+            <span class="timeline-icon" data-pos="64" style="left: 64%;" title="Nano Banana">🍌</span>
             <span class="timeline-icon" data-pos="78" style="left: 78%;" title="Vibing">😵‍💫</span>
         </div>
     </div>
@@ -303,30 +348,75 @@
             <span class="date-tag">November 2024</span>
             <h2>TUI + Multimodal Models 👀</h2>
             <ul>
-                <li>Built <span class="highlight">OllamaTea</span> - BubbleTea components for Ollama</li>
+                <li>Built <a href="https://github.com/NimbleMarkets/ollamatea" target="_blank" class="highlight">OllamaTea</a> - BubbleTea components for Ollama</li>
                 <li>Terminal UI meets local LLM inference</li>
                 <li>Combined with <span class="code">dbn-go</span> DataBento library</li>
-                <li>Created <span class="highlight">NTCharts</span> multi-modal inferencing demo</li>
+                <li>Created <a href="https://github.com/NimbleMarkets/ntcharts" target="_blank" class="highlight">NTCharts</a> multi-modal inferencing demo</li>
             </ul>
             <div class="takeaway">
                 <p>Bringing AI capabilities directly into the terminal workflow</p>
+            </div>
+            <div class="slide-links">
+                <a href="https://github.com/NimbleMarkets/ollamatea" target="_blank">github.com/NimbleMarkets/ollamatea</a>
+                <a href="https://github.com/NimbleMarkets/ntcharts" target="_blank">github.com/NimbleMarkets/ntcharts</a>
             </div>
             <aside class="presenter-notes">
                 This started with OllamaTea - BubbleTea components that let you interact with Ollama models right in your terminal. The interesting part was combining this with DataBento financial data through dbn-go, creating a demo where the model could analyze time-series charts. Key insight: terminal apps don't have to be disconnected from AI.
             </aside>
         </div>
 
-        <!-- Slide 2: Feb 2025 - Claude Code -->
+        <!-- Slide 2: Nov 2024 - MCP Announced -->
+        <div class="slide" data-timeline="4">
+            <span class="date-tag">November 25, 2024</span>
+            <h2>Anthropic Releases MCP 🔌</h2>
+            <ul>
+                <li><a href="https://modelcontextprotocol.io" target="_blank" class="highlight">Model Context Protocol</a> - open standard for AI tool use</li>
+                <li>Standardized way to connect LLMs to data and tools</li>
+                <li>Open specification with reference implementations</li>
+            </ul>
+            <div class="takeaway">
+                <p>The foundation for agentic AI workflows</p>
+            </div>
+            <div class="slide-links">
+                <a href="https://modelcontextprotocol.io" target="_blank">modelcontextprotocol.io</a>
+            </div>
+            <aside class="presenter-notes">
+                Just weeks into my TUI experiments, Anthropic released MCP - Model Context Protocol. An open standard for connecting AI models to external data and tools. This would become central to my work months later, but at the time I filed it away as interesting.
+            </aside>
+        </div>
+
+        <!-- Slide 3: Jan 2025 - DeepSeek R1 -->
+        <div class="slide" data-timeline="16">
+            <span class="date-tag">January 20, 2025</span>
+            <h2>DeepSeek Releases R1 🧠</h2>
+            <ul>
+                <li>Reasoning model trained with <span class="highlight">reinforcement learning</span></li>
+                <li>Fully <span class="highlight">open weights</span> release</li>
+                <li>Detailed research papers published</li>
+                <li>Showed RL could match frontier reasoning capabilities</li>
+            </ul>
+            <div class="takeaway">
+                <p>Open research accelerates the entire field</p>
+            </div>
+            <aside class="presenter-notes">
+                DeepSeek R1 was a watershed moment. A reasoning model that could compete with the best, trained using reinforcement learning, with fully open weights AND detailed research papers. This kind of openness accelerates everyone's understanding of what's possible.
+            </aside>
+        </div>
+
+        <!-- Slide 4: Feb 2025 - Claude Code -->
         <div class="slide" data-timeline="21">
             <span class="date-tag">February 24, 2025</span>
             <h2>Claude Code Released ✴️</h2>
             <ul>
-                <li>Anthropic ships <span class="highlight">Claude Code</span> - agentic coding in terminal</li>
+                <li>Anthropic ships <a href="https://claude.ai/code" target="_blank" class="highlight">Claude Code</a> - agentic coding in terminal</li>
                 <li>Full filesystem access, git integration, tool use</li>
                 <li>The beginning of practical AI-assisted development</li>
             </ul>
             <div class="takeaway">
                 <p>TUI re-acceptance revolution begins - terminals are cool again</p>
+            </div>
+            <div class="slide-links">
+                <a href="https://claude.ai/code" target="_blank">claude.ai/code</a>
             </div>
             <aside class="presenter-notes">
                 February 2025 was a pivotal moment. Claude Code launched - an agentic coding assistant that lives in your terminal. This validated what I'd been exploring with OllamaTea: the terminal is a first-class environment for AI. It kicked off a broader TUI re-acceptance - people realizing that text interfaces and AI work beautifully together.
@@ -339,23 +429,27 @@
             <h2>MCP Exploration 🤖</h2>
             <ul>
                 <li>Built MCP servers: DataBento, buttplug-mcp</li>
-                <li>Culminated in <span class="highlight">dank-mcp</span></li>
+                <li>Culminated in <a href="https://github.com/AgentDank/dank-mcp" target="_blank" class="highlight">dank-mcp</a></li>
                 <li>Cannabis dataset queries via DuckDB + Claude</li>
             </ul>
             <div class="takeaway">
                 <p><span class="highlight">Learnings:</span> Tool descriptions are crucial. LLMs love structured markdown. APIs aren't always meant to be wrapped directly.</p>
+            </div>
+            <div class="slide-links">
+                <a href="https://github.com/AgentDank/dank-mcp" target="_blank">github.com/AgentDank/dank-mcp</a>
+                <a href="https://modelcontextprotocol.io" target="_blank">modelcontextprotocol.io</a>
             </div>
             <aside class="presenter-notes">
                 MCP - Model Context Protocol - lets you expose data and tools to LLMs in a standardized way. dank-mcp was the fun one: Connecticut cannabis registry data loaded into DuckDB, exposed through MCP. You could ask Claude questions about products and it would write SQL queries. The big lesson: how you describe your tools matters more than how powerful they are. LLMs work best with well-structured interfaces.
             </aside>
         </div>
 
-        <!-- Slide 3: May 2025 - Agent Looping -->
+        <!-- Slide 4: May 2025 - Agent Looping -->
         <div class="slide" data-timeline="43">
             <span class="date-tag">May 2025</span>
             <h2>MCP Agent Looping</h2>
             <ul>
-                <li>Developed <span class="highlight">screentime-mcp</span></li>
+                <li>Developed <a href="https://github.com/AgentDank/screentime-mcp" target="_blank" class="highlight">screentime-mcp</a></li>
                 <li>Agentic loops: generate → test → improve</li>
                 <li>Used Charmbracelet Crush to develop MCPs...</li>
                 <li>...while improving Crush's MCP support</li>
@@ -363,12 +457,29 @@
             <div class="takeaway">
                 <p>World knowledge + SQL = deterministic answers to iterate on</p>
             </div>
+            <div class="slide-links">
+                <a href="https://github.com/AgentDank/screentime-mcp" target="_blank">github.com/AgentDank/screentime-mcp</a>
+            </div>
             <aside class="presenter-notes">
                 This is where things got meta. I was building MCP servers while using an MCP-enabled tool (Crush) that I was also contributing to. The key insight: LLMs have world knowledge but sometimes you need deterministic answers. SQL gives you that ground truth, then you can iterate with the LLM to refine queries and visualizations.
             </aside>
         </div>
 
-        <!-- Slide 4: Nov 2025 - New Models -->
+        <!-- Slide 5: Aug 2025 - Nano Banana -->
+        <div class="slide" data-timeline="64">
+            <span class="date-tag">August 26, 2025</span>
+            <h2>Google Releases Nano Banana 🍌</h2>
+            <ul>
+                <li>Breakthrough image generation model</li>
+                <li>Small, fast, and surprisingly capable</li>
+                <li>Democratized high-quality image generation</li>
+            </ul>
+            <aside class="presenter-notes">
+                Google's Nano Banana was a game-changer for image generation - small enough to run locally but with quality that rivaled much larger models. The name was whimsical but the capabilities were serious.
+            </aside>
+        </div>
+
+        <!-- Slide 6: Nov 2025 - New Models -->
         <div class="slide" data-timeline="78">
             <span class="date-tag">November 2025</span>
             <h2>AntiGravity + Frontier Models 😵‍💫</h2>
@@ -391,16 +502,20 @@
             <ul>
                 <li>Substitute teaching - kids on Google Classroom</li>
                 <li>Live coded on the smartboard:</li>
-                <li class="highlight">Quadratic Formula Explorer</li>
-                <li class="highlight">Proving Parallelograms</li>
+                <li><a href="https://github.com/ConAcademy/quadratic_explorer" target="_blank" class="highlight">Quadratic Formula Explorer</a></li>
+                <li><a href="https://github.com/ConAcademy/proving_parallelograms" target="_blank" class="highlight">Proving Parallelograms</a></li>
                 <li>Sprinkled inspiration about machine intelligence</li>
             </ul>
+            <div class="slide-links">
+                <a href="https://github.com/ConAcademy/quadratic_explorer" target="_blank">github.com/ConAcademy/quadratic_explorer</a>
+                <a href="https://github.com/ConAcademy/proving_parallelograms" target="_blank">github.com/ConAcademy/proving_parallelograms</a>
+            </div>
             <aside class="presenter-notes">
                 I was substitute teaching and the kids were just doing Google Classroom busywork. So I started vibe coding on the smartboard - built a quadratic formula explorer for algebra, then a parallelogram proof visualizer for honors geometry. The kids got to see code come together in real-time with AI assistance. Planted some seeds about what's possible.
             </aside>
         </div>
 
-        <!-- Slide 6: Late Dec 2025 - Multimodal Debug -->
+        <!-- Slide 7: Late Dec 2025 - Multimodal Debug -->
         <div class="slide" data-timeline="91">
             <span class="date-tag">Late December 2025</span>
             <h2>Multimodal Debugging</h2>
@@ -417,12 +532,15 @@
                 <span class="highlight">Screenshot</span> →
                 <span class="highlight">Report</span>
             </p>
+            <div class="slide-links">
+                <a href="https://github.com/ConAcademy/proving_parallelograms" target="_blank">github.com/ConAcademy/proving_parallelograms</a>
+            </div>
             <aside class="presenter-notes">
                 A friend saw my parallelogram app and sent a screenshot of a bug - it was drawing a bowtie instead of a proper parallelogram. What blew my mind: Claude could see the image, understand the geometric error, generate a fix, create a test case, manipulate the page in Chrome to verify it, screenshot the result, and give me a report. End-to-end multimodal debugging.
             </aside>
         </div>
 
-        <!-- Slide 7: Late Dec 2025 - Boat Engineering -->
+        <!-- Slide 8: Late Dec 2025 - Boat Engineering -->
         <div class="slide" data-timeline="93">
             <span class="date-tag">Late December 2025</span>
             <h2>Vibe Boat Engineering 😵‍💫</h2>
@@ -444,21 +562,25 @@
             <span class="date-tag">January 2026</span>
             <h2>Swift → 3D Model</h2>
             <ul>
-                <li>Discovered <span class="highlight">Cadova</span> on HackerNews</li>
+                <li>Discovered <a href="https://github.com/tomasf/Cadova" target="_blank" class="highlight">Cadova</a> on HackerNews</li>
                 <li>Swift library for parametric 3D modeling → 3MF output</li>
                 <li>Realization: Swift as <span class="highlight">ground truth</span> for 3D models</li>
                 <li>Like how Claude generates DOCX or SVG...</li>
-                <li>Documented in <span class="code">WeaselToonCadova</span> repo</li>
+                <li>Documented in <a href="https://github.com/ConAcademy/WeaselToonCadova" target="_blank" class="code">WeaselToonCadova</a> repo</li>
             </ul>
             <div class="takeaway">
                 <p>Started with Claude Desktop, got serious with Claude Code</p>
+            </div>
+            <div class="slide-links">
+                <a href="https://github.com/tomasf/Cadova" target="_blank">github.com/tomasf/Cadova</a>
+                <a href="https://github.com/ConAcademy/WeaselToonCadova" target="_blank">github.com/ConAcademy/WeaselToonCadova</a>
             </div>
             <aside class="presenter-notes">
                 I was mid-comment on a HackerNews post about Cadova when it clicked. Cadova lets you write Swift code that outputs 3MF files - 3D printable models. Just like Claude can generate SVG for images or DOCX for documents, it could generate Swift code as a deterministic representation of 3D models. The WeaselToonCadova repo documents the whole agentic loop: generate code, render, analyze, iterate.
             </aside>
         </div>
 
-        <!-- Slide 9: Jan 2026 - Renaissance -->
+        <!-- Slide 10: Jan 2026 - Renaissance -->
         <div class="slide" data-timeline="100">
             <span class="date-tag">January 2026</span>
             <h2>LLM-assisted Renaissance</h2>
@@ -472,12 +594,17 @@
                 <li>Business + financial planning</li>
                 <li>This presentation</li>
             </ul>
+            <div class="slide-links">
+                <a href="https://github.com/NimbleMarkets" target="_blank">github.com/NimbleMarkets</a>
+                <a href="https://github.com/AgentDank" target="_blank">github.com/AgentDank</a>
+                <a href="https://github.com/ConAcademy" target="_blank">github.com/ConAcademy</a>
+            </div>
             <aside class="presenter-notes">
                 Right now I have so many threads going. The AI assistance isn't just for experiments anymore - it's integrated into everything. Charting library improvements, migrating CI/CD, building new apps, even business planning. Each of these benefits from the patterns I learned over the past year.
             </aside>
         </div>
 
-        <!-- Slide 10: Artistic License -->
+        <!-- Slide 11: Artistic License -->
         <div class="slide" data-timeline="100">
             <span class="date-tag">January 2026</span>
             <h2>Artistic License</h2>
@@ -495,15 +622,18 @@
             </aside>
         </div>
 
-        <!-- Slide 11: Conclusion -->
+        <!-- Slide 12: Conclusion -->
         <div class="slide final-slide" data-timeline="100">
             <h2>Take this stuff and solve your problems with it!</h2>
             <p style="margin-top: 2em; font-size: 1.3em; color: #888;">
                 Terminal UIs • MCP servers • Agentic loops • Multimodal debugging • CAD generation
             </p>
-            <p style="margin-top: 2em; font-size: 1.1em; color: #555;">
-                @neomantra | github.com/NimbleMarkets | github.com/AgentDank | github.com/ConAcademy
-            </p>
+            <div class="slide-links" style="position: relative; bottom: auto; left: auto; right: auto; margin-top: 3em; text-align: center;">
+                <a href="https://news.ycombinator.com/user?id=neomantra" target="_blank">news.ycombinator.com/user?id=neomantra</a>
+                <a href="https://github.com/NimbleMarkets" target="_blank">github.com/NimbleMarkets</a>
+                <a href="https://github.com/AgentDank" target="_blank">github.com/AgentDank</a>
+                <a href="https://github.com/ConAcademy" target="_blank">github.com/ConAcademy</a>
+            </div>
             <aside class="presenter-notes">
                 The tools are here. Whether it's bringing AI to your terminal apps, exposing your data through MCP, building agentic loops for iteration, using multimodal capabilities for debugging, or generating CAD models from code - find the patterns that work for your problems. Thanks!
             </aside>
