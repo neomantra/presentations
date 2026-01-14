@@ -274,3 +274,15 @@ on the industry milestones page can you hide the thumbs down in the timeline?
 ## 2026-01-14T13:25:31Z
 
 on the LLM-assisted renaissance page, add a rocketship emoji and also include it in the timeline
+
+---
+
+## 2026-01-14T13:56:09Z
+
+create a readme.md for humans, which describes the REPOSITORY and VIBE CODING A PRESENTATION aspect.  You can also include a summary and the slides table of contents, but the page is just an introduction to the presentation, the contents of the presentation speak for themselves
+
+---
+
+## 2026-01-14T13:59:27Z
+
+near the top, add a link to the PROMPTS.md and note to the reader that they can read the evolution there, or see the checkpoints at the commits page https://github.com/neomantra/presentations/commits/master/
