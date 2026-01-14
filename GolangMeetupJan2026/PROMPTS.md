@@ -340,3 +340,9 @@ again, make them 25% larger and add a little more horizontal separation
 ## 2026-01-14T14:28:14Z
 
 that's great, now make them 260px and then apply all the same styling to the qr codes on the fin page
+
+---
+
+## 2026-01-14T14:32:27Z
+
+I had SuperGrok review the presentation and we came up with a better title and subtitle.  The title is now "LLM Odyssey 2025" and the subtitle is "From TUI Experiments to Agentic Wins in Golang".   Go through and update the relevant documents to reflect this change including the README.md and CLAUDE.md and AGENTS.md files. be sure to update the <title> too. 

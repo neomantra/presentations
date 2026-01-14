@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a presentation project for a 15-minute lightning talk at the NYC Golang Meetup (January 2026). The presentation covers the author's journey with LLMs from November 2024 to January 2026, focusing on code generation, multi-modal capabilities, and practical applications.
+This is a presentation project titled "LLM Odyssey 2025: From TUI Experiments to Agentic Wins in Golang" — a 15-minute lightning talk at the NYC Golang Meetup (January 2026). The presentation covers the author's journey with LLMs from November 2024 to January 2026, focusing on TUI development, multi-modal capabilities, and agentic applications.
 
 ## Key Files
 

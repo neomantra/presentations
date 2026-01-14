@@ -1,6 +1,6 @@
-# We've Turned The Corner
+# LLM Odyssey 2025
 
-**From LLM Experiments to Getting Work Done**
+**From TUI Experiments to Agentic Wins in Golang**
 
 A 15-minute lightning talk for the NYC Golang Meetup, January 2026.
 
@@ -12,7 +12,7 @@ Want to see how this was made? Read the [prompt history](PROMPTS.md) to follow t
 
 This presentation was itself vibe coded — built entirely through conversation with Claude Code. The HTML, CSS, JavaScript, responsive design, and even this README were generated through natural language prompts rather than manual coding.
 
-The irony isn't lost: a talk about the evolution from LLM experiments to practical work, delivered via a presentation that demonstrates exactly that evolution.
+The irony isn't lost: a talk about the journey from TUI experiments to agentic wins, delivered via a presentation that demonstrates exactly that evolution.
 
 ## Vibe Coding a Presentation
 
@@ -30,7 +30,7 @@ No frameworks. No build step. Just HTML/CSS/JS generated through conversation.
 
 | # | Date | Topic |
 |---|------|-------|
-| 1 | — | Title: We've Turned The Corner |
+| 1 | — | Title: LLM Odyssey 2025 |
 | 2 | Nov 2024 | TUI + Multimodal Models (OllamaTea, NTCharts) |
 | 3 | — | Industry Milestones (MCP, DeepSeek R1, Claude Code, Nano Banana) |
 | 4 | Apr 2025 | MCP Exploration (dbn-go-mcp, buttplug-mcp, dank-mcp) |
