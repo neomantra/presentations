@@ -843,3 +843,22 @@ summarize the talk duration with safemode disabled and fallthrough enabled.  upd
 
 remove "No footguns allowed."
 "Never fully released" to "Never released binaries"
+
+---
+
+## 2026-01-14T21:43:38Z
+
+make Culminated in dank-mcp
+Connect Claude with cannabis datasets via DuckDB SQL.  with a colon after dank-mcp and change the word connect to connecting
+
+---
+
+## 2026-01-14T21:44:37Z
+
+remove "culminated in"
+
+---
+
+## 2026-01-14T21:45:50Z
+
+you can have it be the same indentation as the others
