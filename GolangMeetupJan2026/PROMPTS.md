@@ -210,3 +210,15 @@ meh Practial Execution is lame ... I want to say i get practical work done in ut
 ## 2026-01-14T04:45:02Z
 
 From LLM Experiments to Getting Work Done
+
+---
+
+## 2026-01-14T04:51:10Z
+
+since it wraps around , put a slide with a FIN sign to demarcate the end of the presentation. you can make the FIN sign fancy like the old time movies.
+
+---
+
+## 2026-01-14T04:54:29Z
+
+it is not going fullscreen on my iphone... anything we can do about that?
