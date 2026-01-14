@@ -176,3 +176,37 @@ on the antigravity+frontier models page, vibe coding for kids page, multimodal d
 ## 2026-01-14T04:24:36Z
 
 now each of the images on those pages and the mcp exploration page, i want clicking the image to open their respective image in a new window, i will use it to zoom in during the presentation.  do for all except for agentdank himself and the buttplug, they don't need to be linked
+
+---
+
+## 2026-01-14T04:29:24Z
+
+it's a bit of a pain on mobile because of the interface.  is there a full-screen mode that's possible?
+
+---
+
+## 2026-01-14T04:33:58Z
+
+on the final llm-renessaince page, 
+for NTChart multimodal + terminal testing, hyperlink that to https://github.com/NimbleMarkets/ntcharts/issues/7
+for AgentDank improvements, put AgentDank `dank-extract` and hyperlink to https://github.com/AgentDank/dank-extract
+for OSS devops: Travis -> GitHub Actions hyperlink to https://github.com/openresty/docker-openresty/issues/289
+for this presentation, link to https://github.com/neomantra/presentations/tree/master/GolangMeetupJan2026 
+
+---
+
+## 2026-01-14T04:42:03Z
+
+rename the title slide from "My LLM Journey" to "We've Turned The Corner" and the subtitle from "From Experiments to Practial Work" to "From LLM Experients to Practical Execution"
+
+---
+
+## 2026-01-14T04:43:25Z
+
+meh Practial Execution is lame ... I want to say i get practical work done in utilizing these new technologies
+
+---
+
+## 2026-01-14T04:45:02Z
+
+From LLM Experiments to Getting Work Done
