@@ -1170,7 +1170,7 @@
     <div class="nav">
         <button onclick="prevSlide()">← Prev</button>
         <button onclick="nextSlide()">Next →</button>
-        <button onclick="toggleNotes()" style="background: #222;">Notes (N)</button>
+        <button onclick="toggleNotes()" id="notes-btn" style="background: #222;">Notes (N)</button>
         <button onclick="toggleFullscreen()" id="fullscreen-btn" style="background: #222;">⛶ Full (F)</button>
     </div>
 
@@ -1443,48 +1443,22 @@
             saveSettings();
         });
 
-        // Long-press detection on nav bar
-        let longPressTimer = null;
-        const LONG_PRESS_DURATION = 800;
+        // Triple-tap detection on Notes button
+        const notesBtn = document.getElementById('notes-btn');
+        let tapTimes = [];
+        const TAP_DELAY = 400;
 
-        nav.addEventListener('touchstart', function(e) {
-            longPressTimer = setTimeout(() => {
+        notesBtn.addEventListener('click', function(e) {
+            const now = Date.now();
+            // Remove old taps outside the window
+            tapTimes = tapTimes.filter(t => now - t < TAP_DELAY * 2);
+            tapTimes.push(now);
+
+            if (tapTimes.length >= 3) {
+                e.preventDefault();
+                e.stopPropagation();
                 openSettings();
-            }, LONG_PRESS_DURATION);
-        }, { passive: true });
-
-        nav.addEventListener('touchend', function() {
-            if (longPressTimer) {
-                clearTimeout(longPressTimer);
-                longPressTimer = null;
-            }
-        });
-
-        nav.addEventListener('touchmove', function() {
-            if (longPressTimer) {
-                clearTimeout(longPressTimer);
-                longPressTimer = null;
-            }
-        });
-
-        // Also allow long-press with mouse for testing
-        nav.addEventListener('mousedown', function(e) {
-            longPressTimer = setTimeout(() => {
-                openSettings();
-            }, LONG_PRESS_DURATION);
-        });
-
-        nav.addEventListener('mouseup', function() {
-            if (longPressTimer) {
-                clearTimeout(longPressTimer);
-                longPressTimer = null;
-            }
-        });
-
-        nav.addEventListener('mouseleave', function() {
-            if (longPressTimer) {
-                clearTimeout(longPressTimer);
-                longPressTimer = null;
+                tapTimes = [];
             }
         });
 

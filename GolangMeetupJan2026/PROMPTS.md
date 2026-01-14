@@ -574,3 +574,15 @@ If shake works, i think it would be hilarious. How prevalent is the support for 
 ## 2026-01-14T17:11:52Z
 
 i don't want to use a URL parameter.  let's use a long-press on the menu bar, pops up a dialog to toggle NSFW and a checkbox to enable shake, and if they do that checkbox then security is requested if needed.   we can use cookies to save this but that is the only cookie i want.  please check if we are using cookies already and if we are, report them to meusing cookies).  
+
+---
+
+## 2026-01-14T17:18:01Z
+
+the long press is a pain, how about just double-tapping?
+
+---
+
+## 2026-01-14T17:20:23Z
+
+i want to make it that it is only when you triple-tap (or if that's not possible double-tap) the Notes button.
