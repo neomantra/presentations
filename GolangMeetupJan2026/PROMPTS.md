@@ -690,3 +690,54 @@ i guess the emojis can be on both sides of that
 ## 2026-01-14T18:38:08Z
 
 on mcp exploration, in safe mode it should be dink-mcp
+
+---
+
+## 2026-01-14T18:45:48Z
+
+on the artistic license hidden page, move it to after the weild page, in should say "<THIS SPACE IS INTENTIONALLY BLANK>" in the existing gold style.  When "F" is pressed, that will activate fallthrough mode which will show the Artistic License page. you can put an 🇫 indicator where the safemode indicator lives.  this can be activated by simultaneously pressing the prev/next buttons"
+
+---
+
+## 2026-01-14T19:00:09Z
+
+oh noes, F is much better for Fullscreen.  Restore that and the G key will activate it as a nod to their GoTime roots
+
+---
+
+## 2026-01-14T19:01:21Z
+
+on pages with double-digits, the safemode indicator is too close to the digits. it is also awkward relative to fallthrough indicator.  can you clean up that corner?
+
+---
+
+## 2026-01-14T19:10:50Z
+
+artistic license page activated doesn't look like the rest.  the title is centered  the january 2026 line isn't across.  can you check how it is implemented and fix it
+
+---
+
+## 2026-01-14T19:57:45Z
+
+looking good.  put a painting palette icon next to it, but you don't need to put that in the timeline.
+for first line "Wanted to make something for Fallthrough" to"Wanted to make something Fallthrough inspired" with Fallthrough linked to https://fallthrough.transistor.fm/ and add that link to the bottom.
+second line "Start with photo of hosts -> LLM iterates Swift🔄3MF -> optional human prompt -> 3MF"
+third line: Fine-tune 3MF on additional reference, with face detection 🔄"
+fourth line: modify "printed it" to "Printed It!:
+put an info box with change to "Human -> Camera -> (Composited Image + Prompt) -> Swift code 🔄 3MF renders -> 3MF file -> G-Code -> Sculpture"
+Remove the computational graphs line
+Add the images FallthroughHostGrab.png and FallthroughCad1.png
+After an advance, then you can reveal the image at images/FallthroughSculpture.png
+
+---
+
+## 2026-01-14T20:06:54Z
+
+there is now two host images FallthroughHostGrab.png and FallthroughHostGrab2.png.  (i manually edited one of them in).  they should be one above each other.
+I also only want the "printed it" text after the final image reveal
+
+---
+
+## 2026-01-14T20:10:53Z
+
+great, center the two left images above each other.  also fix the responsive reflow with other columns

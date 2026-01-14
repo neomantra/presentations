@@ -323,12 +323,23 @@
             background: #4a9eff;
         }
 
-        .slide-counter {
+        .bottom-left {
             position: fixed;
             bottom: calc(25px + env(safe-area-inset-bottom));
             left: calc(20px + env(safe-area-inset-left));
-            color: #555;
+            display: flex;
+            align-items: center;
+            gap: 12px;
             font-size: 14px;
+        }
+
+        .slide-counter {
+            color: #555;
+        }
+
+        .mode-indicators {
+            display: flex;
+            gap: 6px;
         }
 
         .title-slide {
@@ -395,16 +406,11 @@
             display: inline;
         }
 
-        /* Safe mode styles */
+        /* Mode indicators */
         .nsfw-indicator {
-            position: fixed;
-            bottom: calc(25px + env(safe-area-inset-bottom));
-            left: calc(60px + env(safe-area-inset-left));
             color: #ff4444;
-            font-size: 14px;
             font-weight: bold;
             display: none;
-            z-index: 100;
         }
 
         body.nsfw-mode .nsfw-indicator {
@@ -418,6 +424,24 @@
 
         /* NSFW mode: hide safe content */
         body.nsfw-mode .safe-only {
+            display: none !important;
+        }
+
+        /* Fallthrough mode indicator */
+        .fallthrough-indicator {
+            display: none;
+        }
+
+        body.fallthrough-mode .fallthrough-indicator {
+            display: block;
+        }
+
+        /* Fallthrough mode: show/hide content */
+        body:not(.fallthrough-mode) .fallthrough-only {
+            display: none !important;
+        }
+
+        body.fallthrough-mode .fallthrough-hidden {
             display: none !important;
         }
 
@@ -494,9 +518,14 @@
 
             .slide-media a,
             .slide-media > img,
-            .slide-media > video {
+            .slide-media > video,
+            .slide-media > div {
                 flex: 0 0 calc(50% - 10px);
                 max-width: calc(50% - 10px);
+            }
+
+            .slide-media .stacked-images img {
+                max-height: 60px;
             }
 
             .slide-links {
@@ -534,10 +563,11 @@
                 font-size: 12px;
             }
 
-            .slide-counter {
+            .bottom-left {
                 bottom: calc(15px + env(safe-area-inset-bottom));
                 left: calc(10px + env(safe-area-inset-left));
                 font-size: 12px;
+                gap: 8px;
             }
 
             .threads-grid {
@@ -618,9 +648,19 @@
 
             .slide-media a,
             .slide-media > img,
-            .slide-media > video {
+            .slide-media > video,
+            .slide-media > div {
                 flex: 0 0 100%;
                 max-width: 100%;
+            }
+
+            .slide-media .stacked-images {
+                flex-direction: row !important;
+                justify-content: center;
+            }
+
+            .slide-media .stacked-images img {
+                max-height: 50px;
             }
 
             /* QR codes on extra small screens */
@@ -1039,25 +1079,7 @@
             </aside>
         </div>
 
-        <!-- Slide 11: Artistic License (HIDDEN - remove data-hidden to show) -->
-        <div class="slide" data-timeline="100" data-hidden="true" style="display: none !important;">
-            <span class="date-tag">January 2026</span>
-            <h2>Artistic License</h2>
-            <ul>
-                <li>Wanted to make something for Fallthrough</li>
-                <li>Started with photo of hosts → iterate with AI</li>
-                <li>Fine-tuned on additional reference photos</li>
-                <li>Generated 3D model → <span class="key-phrase">printed it</span></li>
-            </ul>
-            <p style="font-size: 1.2em; margin-top: 1em; color: #888;">
-                Computational graphs → Models → Coordinate spaces → G-code → Physical artifact
-            </p>
-            <aside class="presenter-notes">
-                I wanted to flex the artistic side. Started with a photo of the Fallthrough podcast hosts, iterated with AI image generation, then used what I learned about Swift-to-3D to create a model. I love how tree support material looks - it's fitting that all these computational graphs, ML models, coordinate transformations, and path planning algorithms converge into a physical object.
-            </aside>
-        </div>
-
-        <!-- Slide 12: Conclusion -->
+        <!-- Slide 11: Conclusion -->
         <div class="slide final-slide" data-timeline="100" style="justify-content: center; align-items: center; text-align: center;">
             <h2>Wield this magic!<br>Use it to solve your problems...</h2>
             <div style="margin-top: 2em; font-size: 1.3em; color: #888; display: flex; flex-direction: column; gap: 0.5em;">
@@ -1074,6 +1096,48 @@
             </div>
             <aside class="presenter-notes">
                 The tools are here. Multi-modal models that see and understand. Tool calling through MCP. Agentic loops that iterate autonomously. Vibe coding that lets you build at the speed of thought. Find the patterns that work for your problems and wield this magic. Thanks!
+            </aside>
+        </div>
+
+        <!-- Slide 12: Artistic License (Fallthrough mode) -->
+        <div class="slide" data-timeline="100" data-has-reveal="true">
+            <!-- Default: blank message (centered) -->
+            <div class="fallthrough-hidden" style="display: flex; justify-content: center; align-items: center; height: 100%; font-family: 'Times New Roman', 'Georgia', serif; font-size: 2em; font-style: italic; color: #d4af37; text-shadow: 1px 1px 2px rgba(0,0,0,0.5), 0 0 20px rgba(212,175,55,0.3);">
+                &lt;THIS SPACE IS INTENTIONALLY BLANK&gt;
+            </div>
+            <!-- Fallthrough mode: actual content (normal slide layout) -->
+            <span class="date-tag fallthrough-only">January 2026</span>
+            <h2 class="fallthrough-only">Artistic License 🎨</h2>
+            <ul class="fallthrough-only">
+                <li>Wanted to make something <a href="https://fallthrough.transistor.fm/" target="_blank" class="highlight">Fallthrough</a> inspired</li>
+                <li>Start with photo of hosts → LLM iterates Swift 🔄 3MF → optional human prompt → 3MF</li>
+                <li>Fine-tune 3MF on additional reference, with face detection 🔄</li>
+                <li class="reveal-text" style="opacity: 0; transition: opacity 0.5s;">Generated 3D model → <span class="key-phrase">Printed It!</span></li>
+            </ul>
+            <div class="takeaway fallthrough-only">
+                <p>Human → Camera → (Composited Image + Prompt) → Swift code 🔄 3MF renders → 3MF file → G-Code → Sculpture</p>
+            </div>
+            <div class="slide-media fallthrough-only" style="align-items: center;">
+                <div class="stacked-images" style="display: flex; flex-direction: column; align-items: center; gap: 5px; flex: 0 0 calc(33% - 15px);">
+                    <a href="images/FallthroughHostGrab.png" target="_blank">
+                        <img src="images/FallthroughHostGrab.png" alt="Fallthrough Hosts 1" style="max-height: 100px;">
+                    </a>
+                    <a href="images/FallthroughHostGrab2.png" target="_blank">
+                        <img src="images/FallthroughHostGrab2.png" alt="Fallthrough Hosts 2" style="max-height: 100px;">
+                    </a>
+                </div>
+                <a href="images/FallthroughCad1.png" target="_blank" style="flex: 0 0 calc(33% - 15px);">
+                    <img src="images/FallthroughCad1.png" alt="Fallthrough CAD">
+                </a>
+                <a href="images/FallthroughSculpture.png" target="_blank" class="reveal-image" style="opacity: 0; transition: opacity 0.5s; flex: 0 0 calc(33% - 15px);">
+                    <img src="images/FallthroughSculpture.png" alt="Fallthrough Sculpture">
+                </a>
+            </div>
+            <div class="slide-links fallthrough-only">
+                <a href="https://fallthrough.transistor.fm/" target="_blank">fallthrough.transistor.fm</a>
+            </div>
+            <aside class="presenter-notes fallthrough-only">
+                I wanted to flex the artistic side. Started with a photo of the Fallthrough podcast hosts, iterated with AI image generation, then used what I learned about Swift-to-3D to create a model. I love how tree support material looks - it's fitting that all these computational graphs, ML models, coordinate transformations, and path planning algorithms converge into a physical object.
             </aside>
         </div>
 
@@ -1102,11 +1166,15 @@
         </div>
     </div>
 
-    <div class="slide-counter">
-        <span id="current-slide">1</span> / <span id="total-slides">12</span>
+    <div class="bottom-left">
+        <div class="slide-counter">
+            <span id="current-slide">1</span> / <span id="total-slides">14</span>
+        </div>
+        <div class="mode-indicators">
+            <span class="nsfw-indicator">✕</span>
+            <span class="fallthrough-indicator">🇫</span>
+        </div>
     </div>
-
-    <div class="nsfw-indicator">✕</div>
 
     <div class="nav">
         <button onclick="prevSlide()">← Prev</button>
@@ -1138,7 +1206,14 @@
         }
 
         function showSlide(n, milestoneStep = 0) {
-            slides.forEach(s => s.classList.remove('active'));
+            slides.forEach(s => {
+                s.classList.remove('active');
+                // Reset any reveal images and text when leaving a slide
+                const revealImg = s.querySelector('.reveal-image');
+                if (revealImg) revealImg.style.opacity = '0';
+                const revealText = s.querySelector('.reveal-text');
+                if (revealText) revealText.style.opacity = '0';
+            });
             currentSlide = (n + totalSlides) % totalSlides;
             slides[currentSlide].classList.add('active');
             document.getElementById('current-slide').textContent = currentSlide + 1;
@@ -1216,16 +1291,23 @@
 
         function nextSlide() {
             const milestones = slides[currentSlide].querySelectorAll('.milestone');
+            const revealImage = slides[currentSlide].querySelector('.reveal-image');
+
             if (milestones.length > 0 && currentMilestone < milestones.length) {
                 currentMilestone++;
                 milestones[currentMilestone - 1].classList.add('visible');
                 const timeline = parseInt(milestones[currentMilestone - 1].dataset.milestoneTimeline) || 0;
                 updateTimeline(timeline);
                 updateMilestoneLinks(currentMilestone);
-                // Show plug when first milestone is revealed
+                // Show hammer when first milestone is revealed
                 if (currentMilestone >= 1) {
                     document.getElementById('hammer-icon').style.display = '';
                 }
+            } else if (revealImage && document.body.classList.contains('fallthrough-mode') && revealImage.style.opacity === '0') {
+                // Reveal the hidden image and text on this slide
+                revealImage.style.opacity = '1';
+                const revealText = slides[currentSlide].querySelector('.reveal-text');
+                if (revealText) revealText.style.opacity = '1';
             } else {
                 showSlide(currentSlide + 1, 0);
             }
@@ -1233,6 +1315,16 @@
 
         function prevSlide() {
             const milestones = slides[currentSlide].querySelectorAll('.milestone');
+            const revealImage = slides[currentSlide].querySelector('.reveal-image');
+
+            // Check if reveal image is visible and should be hidden first
+            if (revealImage && document.body.classList.contains('fallthrough-mode') && revealImage.style.opacity === '1') {
+                revealImage.style.opacity = '0';
+                const revealText = slides[currentSlide].querySelector('.reveal-text');
+                if (revealText) revealText.style.opacity = '0';
+                return;
+            }
+
             if (milestones.length > 0 && currentMilestone > 0) {
                 milestones[currentMilestone - 1].classList.remove('visible');
                 currentMilestone--;
@@ -1297,6 +1389,10 @@
             document.body.classList.toggle('nsfw-mode');
         }
 
+        function toggleFallthroughMode() {
+            document.body.classList.toggle('fallthrough-mode');
+        }
+
         // Simultaneous tap on Notes + Full buttons to toggle safe mode
         const notesBtn = document.getElementById('notes-btn');
         const fullBtn = document.getElementById('fullscreen-btn');
@@ -1330,8 +1426,32 @@
                 toggleNotes();
             } else if (e.key === 'f' || e.key === 'F') {
                 toggleFullscreen();
+            } else if (e.key === 'g' || e.key === 'G') {
+                toggleFallthroughMode();
             } else if (e.key === 'x' || e.key === 'X') {
                 toggleSafeMode();
+            }
+        });
+
+        // Simultaneous tap on Prev + Next buttons to toggle fallthrough mode
+        const prevBtn = document.querySelector('.nav button:first-child');
+        const nextBtn = document.querySelector('.nav button:nth-child(2)');
+        let prevTapTime = 0;
+        let nextTapTime = 0;
+
+        prevBtn.addEventListener('click', function() {
+            prevTapTime = Date.now();
+            if (Math.abs(prevTapTime - nextTapTime) < SIMULTANEOUS_THRESHOLD) {
+                toggleFallthroughMode();
+                prevTapTime = nextTapTime = 0;
+            }
+        });
+
+        nextBtn.addEventListener('click', function() {
+            nextTapTime = Date.now();
+            if (Math.abs(nextTapTime - prevTapTime) < SIMULTANEOUS_THRESHOLD) {
+                toggleFallthroughMode();
+                prevTapTime = nextTapTime = 0;
             }
         });
 
