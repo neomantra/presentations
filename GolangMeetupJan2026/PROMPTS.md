@@ -741,3 +741,98 @@ I also only want the "printed it" text after the final image reveal
 ## 2026-01-14T20:10:53Z
 
 great, center the two left images above each other.  also fix the responsive reflow with other columns
+
+---
+
+## 2026-01-14T20:25:54Z
+
+that was great, let's get the Self-improvement slide done.  Also if you see me diverging from calling this finished, please get me back on task.  It's my last slide to fill
+
+insert this as the first line: World knowledge + SQL generation = deterministic answers to probabilistic questions
+
+Extracted key pattern: Tool Description Markdown (hammer emoji) and Preflight SQL with DB Views and Functions (⚙️ gear icon)
+Then this is what i mean by the rest:
+Initially used to improve tool and I added dev features for this ...
+Then entered agentic loop, where it self-improved the MCP files through me self-improving myself through prompts
+
+---
+
+## 2026-01-14T20:31:42Z
+
+great stab, we advanced .. we will keep working on it, on task.  i like the words you styled.  can you change "Preflight SQL with DB Views and Functions" to be "Preflight SQL ⚙️ (Views and Funcs)".  Change "me self-improving" to "my self-improvement".  Extract a different key idea to put in the thought bubble.  There's an aspect that I didn't release it fully because I was worried about how personal the information is and didn't want any footguns.  Also I added images/ScreentimeMcpRedacted.png just to occupy space.  I didn't keep screenshots because it was so sensitive
+
+---
+
+## 2026-01-14T20:33:40Z
+
+change "personal data..." to "ScreenTime data is very sensitive" 
+in the timeline, the brain and claude milesstone overlap slightly, give them some seperation
+
+---
+
+## 2026-01-14T20:36:13Z
+
+instead of "added dev" put "added hot reloading and other dev goodies"
+On the next line: remove the "Then".
+
+---
+
+## 2026-01-14T20:38:21Z
+
+can you move the date bar slightly down, it overlaps with the mileston icons.
+
+---
+
+## 2026-01-14T20:39:35Z
+
+hmm, that feels worse even?
+
+---
+
+## 2026-01-14T20:42:15Z
+
+that works, thanks.  On self-improvement, replace the third and fourth bullet points:
+1. Human noticing patterns, updating files — added hot reloading and other dev goodies
+2. Agentic loop: LLM self-improved MCP files through my personal self-improvement prompting
+
+---
+
+## 2026-01-14T20:47:07Z
+
+get rid of "and other dev goodies", and add 🥹 in front of human and a colon after Human.  Add a robot emoji to the beginning of Agentic loop
+
+---
+
+## 2026-01-14T20:47:33Z
+
+and remove Extracted from "Extracted Key Pattern"
+
+---
+
+## 2026-01-14T20:48:52Z
+
+"Self-improvement of MCP Server through Agentic Looping🔄" is now "Self-improvement of MCP Server via Agentic Loops🔄" 
+
+---
+
+## 2026-01-14T20:50:52Z
+
+add to the info box: Beware of hallucinations from fuzzy context! 
+
+---
+
+## 2026-01-14T20:52:30Z
+
+let's try to synthesize an SVG to the left of the privacy that shows the agentic cycle, incorporating items from this slide and project
+
+---
+
+## 2026-01-14T20:55:01Z
+
+let's skip that, please remove the svg.  update the presenter notes related to the current slide
+
+---
+
+## 2026-01-14T20:55:56Z
+
+summarize the talk duration with safemode disabled and fallthrough enabled.  update the README as well

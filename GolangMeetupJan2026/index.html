@@ -51,7 +51,7 @@
             height: 10px;
             background: #333;
             border-radius: 5px;
-            margin-top: 8px;
+            margin-top: 4px;
             overflow: visible;
             position: relative;
         }
@@ -682,8 +682,8 @@
         <div class="timeline-icons">
             <span class="timeline-icon" id="eyeballs-icon" data-pos="0" style="left: 0%;" title="Multimodal">👀</span>
             <span class="timeline-icon" id="hammer-icon" data-pos="8" style="left: 8%;" title="MCP Released">🔨</span>
-            <span class="timeline-icon" data-pos="16" style="left: 16%;" title="DeepSeek R1">🧠</span>
-            <span class="timeline-icon" data-pos="21" style="left: 21%;" title="Claude Code">✴️</span>
+            <span class="timeline-icon" data-pos="14" style="left: 14%;" title="DeepSeek R1">🧠</span>
+            <span class="timeline-icon" data-pos="23" style="left: 23%;" title="Claude Code">✴️</span>
             <span class="timeline-icon" id="robot-icon" data-pos="35" style="left: 35%;" title="MCP Exploration">🤖</span>
             <span class="timeline-icon" id="loop-icon" data-pos="43" style="left: 43%;" title="Agent Looping">🔄</span>
             <span class="timeline-icon" id="thumbs-down-icon" data-pos="50" style="left: 50%;" title="Vibe Coding Fail">👎</span>
@@ -836,21 +836,27 @@
         <!-- Slide 4: May 2025 - Agent Looping -->
         <div class="slide" data-timeline="43">
             <span class="date-tag">May 2025</span>
-            <h2>Self-improvement of MCP Server through Agentic Looping 🔄</h2>
+            <h2>Self-improvement of MCP Server via Agentic Loops 🔄</h2>
+            <p style="font-size: 1.3em; color: #ccc; margin-bottom: 0.8em;">World knowledge + SQL generation = deterministic answers to probabilistic questions</p>
             <ul>
                 <li>Built <a href="https://github.com/AgentDank/screentime-mcp" target="_blank" class="highlight">screentime-mcp</a> — querying macOS ScreenTime database (SQLite)</li>
-                <li>Pattern: Data → DuckDB → MCP → LLM (with verbose tool descriptions)</li>
-                <li>Agent loop: Claude queries → fails → informs better descriptions → self-corrects</li>
-                <li>Use the LLM itself to write better tool descriptions</li>
+                <li>Key pattern: <span class="key-phrase">Tool Description Markdown</span> 🔨 and <span class="key-phrase">Preflight SQL</span> ⚙️ (Views and Funcs)</li>
+                <li>🥹 Human: noticing patterns, updating files — added hot reloading</li>
+                <li>🤖 Agentic loop: LLM self-improved MCP files through my personal self-improvement prompting</li>
             </ul>
             <div class="takeaway">
-                <p>The bottleneck isn't tool power — it's <span class="key-phrase">tool description quality</span></p>
+                <p>Never fully released — <span class="key-phrase">ScreenTime data is very sensitive</span>. No footguns allowed. Beware of hallucinations from fuzzy context!</p>
+            </div>
+            <div class="slide-media">
+                <a href="images/ScreentimeMcpRedacted.png" target="_blank">
+                    <img src="images/ScreentimeMcpRedacted.png" alt="Screentime MCP (Redacted)">
+                </a>
             </div>
             <div class="slide-links">
                 <a href="https://github.com/AgentDank/screentime-mcp" target="_blank">github.com/AgentDank/screentime-mcp</a>
             </div>
             <aside class="presenter-notes">
-                This is where the pattern crystallized. I built screentime-mcp to query my Mac's Screen Time data through SQL. The key insight: Claude would fail on queries, and those failures told me exactly how to improve the tool descriptions. Better descriptions led to Claude self-correcting. And here's the meta part — I used Claude to help write those tool descriptions based on the failure modes it encountered. I was also using Charmbracelet Crush to develop this while improving Crush's MCP support. The pattern Data→DuckDB→MCP→LLM with verbose SQL endpoint descriptions became my go-to architecture.
+                The key insight: world knowledge plus SQL generation gives you deterministic answers to probabilistic questions. I built screentime-mcp to query my Mac's Screen Time data. The pattern that emerged: Tool Description Markdown that the LLM reads, and Preflight SQL with views and functions to simplify what the LLM generates. At first I was the human in the loop — noticing patterns, updating files, adding hot reloading to speed up iteration. Then it got meta: I entered an agentic loop where the LLM was improving the MCP files while I was improving my prompts. We were both self-improving. Never fully released though — ScreenTime data is very sensitive, no footguns allowed. And beware of hallucinations from fuzzy context — that's a real risk with this pattern.
             </aside>
         </div>
 

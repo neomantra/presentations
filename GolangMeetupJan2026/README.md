@@ -24,10 +24,20 @@ The presentation is a single `index.html` file with:
 - Presenter notes (press `N`)
 - Fullscreen mode (press `F`)
 - Safe mode for kid-friendly presentations (press `X` or tap Notes+Full simultaneously)
+- Artistic License reveal bonus content (press `G` or tap Prev+Next simultaneously)
 - Responsive design with iOS safe area support
 - iOS "Add to Home Screen" support for true fullscreen on mobile
 
 No frameworks. No build step. Just HTML/CSS/JS generated through conversation.
+
+## Duration
+
+With safe mode disabled and artistic license enabled: **~14 minutes**
+
+- 15 slides total
+- 4 progressive reveals on Industry Milestones
+- 1 progressive reveal on Artistic License
+- 20 total "clicks" through the presentation
 
 ## Slides
 
@@ -37,16 +47,17 @@ No frameworks. No build step. Just HTML/CSS/JS generated through conversation.
 | 2 | Nov 2024 | TUI + Multimodal Models (OllamaTea, NTCharts) |
 | 3 | — | Industry Milestones (MCP, DeepSeek R1, Claude Code, Nano Banana) |
 | 4 | Apr 2025 | MCP Exploration (dbn-go-mcp, buttplug-mcp, dank-mcp) |
-| 5 | May 2025 | MCP Agent Looping |
+| 5 | May 2025 | Self-improvement of MCP Server via Agentic Loops |
 | 6 | Jun 2025 | Take a Shot at Vibe Coding (failed attempt) |
 | 7 | Nov 2025 | AntiGravity + Frontier Models |
 | 8 | Mid Dec 2025 | Vibe Coding for Kids |
 | 9 | Late Dec 2025 | Multimodal Debugging |
 | 10 | Late Dec 2025 | Vibe Boat Engineering |
 | 11 | Jan 2026 | Image → Swift Code → 3D Model → Image... (Cadova) |
-| 12 | Jan 2026 | LLM-assisted Renaissance |
+| 12 | Jan 2026 | LLM-Assisted Renaissance |
 | 13 | — | Wield this magic! |
-| 14 | — | FIN |
+| 14 | — | Artistic License 🎨 |
+| 15 | — | FIN |
 
 ## Author
 
