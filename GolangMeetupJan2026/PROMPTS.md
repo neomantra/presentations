@@ -346,3 +346,22 @@ that's great, now make them 260px and then apply all the same styling to the qr 
 ## 2026-01-14T14:32:27Z
 
 I had SuperGrok review the presentation and we came up with a better title and subtitle.  The title is now "LLM Odyssey 2025" and the subtitle is "From TUI Experiments to Agentic Wins in Golang".   Go through and update the relevant documents to reflect this change including the README.md and CLAUDE.md and AGENTS.md files. be sure to update the <title> too. 
+
+---
+
+## 2026-01-14T14:35:39Z
+
+on my iphone 17, sometimes a bunch of the content appears under the floating URL bar and other UX.  It makes it impossible to read.  is there a better way to handle that?
+
+---
+
+## 2026-01-14T14:40:07Z
+
+Also on the title page, keep the timeline but hide the eyeballs, they are intended for the TUI+Multimodal Models slide.  
+On the TUI+Multimodal Models slide, change the title to "Local LLM TUI + Multimodal Models" Change the Combined with `dbn-go` DetaBento library" to say "Combined with `dbn-go` [DataBento market data](https://github.com/NimbleMarkets/dbn-go/)"  .  also include that link in the set of explicit links at the bottom
+
+---
+
+## 2026-01-14T14:43:38Z
+
+on the Local LLM TUI slide, in its title change "Multimodal Models" to "Multi-modal Models".  In this slides timeline, the plug emoji is revealed, that is for the next slide page.  change the `dbn-go` styling to be the same as the OllamaTea and NTCharts links and you can unlink "DataBento"

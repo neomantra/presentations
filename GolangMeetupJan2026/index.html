@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>LLM Odyssey 2025 - NYC Golang Meetup Jan 2026</title>
     <!-- iOS Web App (Add to Home Screen) -->
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -23,6 +23,11 @@
             background: #1a1a2e;
             color: #eee;
             overflow: hidden;
+            /* iOS safe area support */
+            padding-top: env(safe-area-inset-top);
+            padding-bottom: env(safe-area-inset-bottom);
+            padding-left: env(safe-area-inset-left);
+            padding-right: env(safe-area-inset-right);
         }
 
         .slide-container {
@@ -34,8 +39,8 @@
 
         .timeline {
             position: fixed;
-            top: 20px;
-            right: 20px;
+            top: calc(20px + env(safe-area-inset-top));
+            right: calc(20px + env(safe-area-inset-right));
             width: 320px;
             z-index: 100;
             font-size: 12px;
@@ -289,8 +294,8 @@
 
         .nav {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
+            bottom: calc(20px + env(safe-area-inset-bottom));
+            right: calc(20px + env(safe-area-inset-right));
             display: flex;
             gap: 10px;
             z-index: 100;
@@ -313,8 +318,8 @@
 
         .slide-counter {
             position: fixed;
-            bottom: 25px;
-            left: 20px;
+            bottom: calc(25px + env(safe-area-inset-bottom));
+            left: calc(20px + env(safe-area-inset-left));
             color: #555;
             font-size: 14px;
         }
@@ -378,10 +383,10 @@
         /* Mobile Responsive Styles */
         @media (max-width: 768px) {
             .timeline {
-                width: calc(100% - 40px);
-                left: 20px;
-                right: 20px;
-                top: 10px;
+                width: calc(100% - 40px - env(safe-area-inset-left) - env(safe-area-inset-right));
+                left: calc(20px + env(safe-area-inset-left));
+                right: calc(20px + env(safe-area-inset-right));
+                top: calc(10px + env(safe-area-inset-top));
             }
 
             .timeline-icon {
@@ -389,11 +394,13 @@
             }
 
             .slide {
-                padding: 20px 20px 80px;
+                padding: 20px 20px calc(80px + env(safe-area-inset-bottom));
+                padding-left: calc(20px + env(safe-area-inset-left));
+                padding-right: calc(20px + env(safe-area-inset-right));
             }
 
             .slide.active {
-                padding-top: 70px;
+                padding-top: calc(70px + env(safe-area-inset-top));
                 overflow-y: auto;
             }
 
@@ -455,8 +462,8 @@
             }
 
             .nav {
-                bottom: 10px;
-                right: 10px;
+                bottom: calc(10px + env(safe-area-inset-bottom));
+                right: calc(10px + env(safe-area-inset-right));
                 gap: 5px;
             }
 
@@ -466,8 +473,8 @@
             }
 
             .slide-counter {
-                bottom: 15px;
-                left: 10px;
+                bottom: calc(15px + env(safe-area-inset-bottom));
+                left: calc(10px + env(safe-area-inset-left));
                 font-size: 12px;
             }
 
@@ -504,7 +511,7 @@
             }
 
             body.show-notes .presenter-notes {
-                bottom: 50px;
+                bottom: calc(50px + env(safe-area-inset-bottom));
                 max-height: 100px;
                 font-size: 12px;
                 padding: 10px;
@@ -559,8 +566,8 @@
             <div class="timeline-progress" id="timeline-progress"></div>
         </div>
         <div class="timeline-icons">
-            <span class="timeline-icon" data-pos="0" style="left: 0%;" title="Multimodal">👀</span>
-            <span class="timeline-icon" data-pos="4" style="left: 4%;" title="MCP Released">🔌</span>
+            <span class="timeline-icon" id="eyeballs-icon" data-pos="0" style="left: 0%;" title="Multimodal">👀</span>
+            <span class="timeline-icon" id="plug-icon" data-pos="4" style="left: 4%;" title="MCP Released">🔌</span>
             <span class="timeline-icon" data-pos="16" style="left: 16%;" title="DeepSeek R1">🧠</span>
             <span class="timeline-icon" data-pos="21" style="left: 21%;" title="Claude Code">✴️</span>
             <span class="timeline-icon" data-pos="35" style="left: 35%;" title="MCP Exploration">🤖</span>
@@ -591,12 +598,12 @@
         <!-- Slide 1: Nov 2024 - TUI + Multimodal -->
         <div class="slide" data-timeline="8">
             <span class="date-tag">November 2024</span>
-            <h2>TUI + Multimodal Models 👀</h2>
+            <h2>Local LLM TUI + Multi-modal Models 👀</h2>
             <div style="display: flex; gap: 40px; align-items: flex-start;">
                 <ul style="flex: 1;">
                     <li>Built <a href="https://github.com/NimbleMarkets/ollamatea" target="_blank" class="highlight">OllamaTea</a> - BubbleTea components for Ollama</li>
                     <li>Terminal UI meets local LLM inference</li>
-                    <li>Combined with <span class="code">dbn-go</span> DataBento library</li>
+                    <li>Combined with <a href="https://github.com/NimbleMarkets/dbn-go" target="_blank" class="highlight">dbn-go</a> DataBento market data</li>
                     <li>Created <a href="https://github.com/NimbleMarkets/ntcharts" target="_blank" class="highlight">NTCharts</a> multi-modal inferencing demo</li>
                 </ul>
                 <img src="https://raw.githubusercontent.com/NimbleMarkets/ollamatea/main/tests/ollamatea-512.png" alt="OllamaTea" style="max-height: 180px; border-radius: 8px;">
@@ -612,6 +619,7 @@
             <div class="slide-links">
                 <a href="https://github.com/NimbleMarkets/ollamatea" target="_blank">github.com/NimbleMarkets/ollamatea</a>
                 <a href="https://github.com/NimbleMarkets/ntcharts" target="_blank">github.com/NimbleMarkets/ntcharts</a>
+                <a href="https://github.com/NimbleMarkets/dbn-go" target="_blank">github.com/NimbleMarkets/dbn-go</a>
             </div>
             <aside class="presenter-notes">
                 This started with OllamaTea - BubbleTea components that let you interact with Ollama models right in your terminal. The interesting part was combining this with DataBento financial data through dbn-go, creating a demo where the model could analyze time-series charts. Key insight: terminal apps don't have to be disconnected from AI.
@@ -989,12 +997,28 @@
             // Handle milestones
             const milestones = slides[currentSlide].querySelectorAll('.milestone');
             const thumbsDown = document.getElementById('thumbs-down-icon');
+            const eyeballs = document.getElementById('eyeballs-icon');
+            const plug = document.getElementById('plug-icon');
 
             // Hide thumbs down on industry milestones slide
             if (milestones.length > 0) {
                 thumbsDown.style.display = 'none';
             } else {
                 thumbsDown.style.display = '';
+            }
+
+            // Hide eyeballs on title slide (slide 0)
+            if (currentSlide === 0) {
+                eyeballs.style.display = 'none';
+            } else {
+                eyeballs.style.display = '';
+            }
+
+            // Hide plug on title slide (0) and TUI slide (1) - it's for Industry Milestones
+            if (currentSlide <= 1) {
+                plug.style.display = 'none';
+            } else {
+                plug.style.display = '';
             }
 
             if (milestones.length > 0) {
