@@ -395,3 +395,15 @@ in the timeline the boat overlaps with the rocketship, can you slide it to the l
 ## 2026-01-14T15:05:41Z
 
 On "Take this stuff and solve your problems with it!" rename it to "Wield this magic1\nUse it to solve your problems..."  also since it is a concluding slide you can vertically center it all more.
+
+---
+
+## 2026-01-14T15:09:21Z
+
+The mobile version got a little worse when you changed it before.  The top of the slides are always covered by the iphone status bar (this is ios 26).  also the QR codes lose their aspect ratio in this mode and become unreadable.  I will use the responsive mode of safari to help test this in our iterations, i wasn't doing that before
+
+---
+
+## 2026-01-14T15:13:19Z
+
+you can make the qr code bigger, maybe max 60%.  the primary issue for them was the aspect ratio

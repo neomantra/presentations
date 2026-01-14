@@ -402,14 +402,22 @@
             }
 
             .slide {
-                padding: 20px 20px calc(80px + env(safe-area-inset-bottom));
+                padding: 20px;
+                padding-bottom: calc(80px + env(safe-area-inset-bottom));
                 padding-left: calc(20px + env(safe-area-inset-left));
                 padding-right: calc(20px + env(safe-area-inset-right));
             }
 
             .slide.active {
-                padding-top: calc(70px + env(safe-area-inset-top));
+                padding-top: calc(80px + env(safe-area-inset-top));
                 overflow-y: auto;
+            }
+
+            /* QR codes on mobile - maintain aspect ratio */
+            .slide img[src*="qr-"] {
+                height: auto !important;
+                max-width: 60%;
+                object-fit: contain;
             }
 
             h1 {
@@ -541,7 +549,7 @@
             }
 
             .slide.active {
-                padding-top: 60px;
+                padding-top: calc(70px + env(safe-area-inset-top));
             }
 
             h1 {
@@ -560,6 +568,11 @@
             .slide-media video {
                 max-height: 80px;
                 max-width: 100%;
+            }
+
+            /* QR codes on extra small screens */
+            .slide img[src*="qr-"] {
+                max-width: 60%;
             }
         }
     </style>
