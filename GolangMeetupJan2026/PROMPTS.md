@@ -518,3 +518,59 @@ and yet another review for time please
 ## 2026-01-14T16:47:20Z
 
  on the Vibe Coding for Kids... fixup the linked bullet points so that the text goes to their GitHub Pages page and then add (repo) with a link to the GitHub repo, but leave the parentheses unlinked especially so they get different color
+
+---
+
+## 2026-01-14T16:57:37Z
+
+i want this presentation to default to be Safe for Kids and Safe for work.  Topics of sex and drugs are not appreciated by all, even if they end up being the basis for learning.  This presentation will default to "safe mode"; we don't need any user interface to show off that mode.  By pressing 'X', that will toggle it out of safe-mode.   While you won't show a GUI button for this, when we are in NSFW mode, will put a small red X in the lower left corner, a bit to the right.  Mobile will always keep safe mode for now.
+
+In safe mode, on the MCP Exploration slide, buttplug-mcp becomes ⬜⬜⬜⬜plug-mcp, we keep the styling and  there is no link.  We can keep dank-mcp and it's styling, but remove the link.   IN the last bullet point we say "structured datasets" instead of "cannabis datasets" Also the images of AgentDank and Buttplug.io are hidden.  We also remove any dank-mcp or buttplug links from the bottom.
+
+In unsafe mode, the AgentDank image should go to https://github.com/AgentDank/  also buttplug-mcp had the wrong URL: https://github.com/ConAcademy/buttplug-mcp and should have its link at the bottom
+
+---
+
+## 2026-01-14T16:59:55Z
+
+i want the redaction squares to match the green styling, is there a way to acheive that?
+
+---
+
+## 2026-01-14T17:00:21Z
+
+also verify that the presenter notes are also redacted
+
+---
+
+## 2026-01-14T17:01:19Z
+
+Can you suggest any other NSFW aspects of this presentation,  places to include this feature?
+
+---
+
+## 2026-01-14T17:05:05Z
+
+in safe mode:
+for 1, switch AgentDank to AgentDink 
+for 2, change AgentDank to AgentDink, and hide the images.  sanitize the presenter notes in this mode
+for 3. change "AgentDank dank-extract" to "AgentDink `dink-extract`" with no link 
+for 4. remove AgentDank from the list
+
+---
+
+## 2026-01-14T17:07:12Z
+
+do you have a suggestion for how to enable this mode on mobile? don't make any changes, just tell me
+
+---
+
+## 2026-01-14T17:08:08Z
+
+If shake works, i think it would be hilarious. How prevalent is the support for that?
+
+---
+
+## 2026-01-14T17:11:52Z
+
+i don't want to use a URL parameter.  let's use a long-press on the menu bar, pops up a dialog to toggle NSFW and a checkbox to enable shake, and if they do that checkbox then security is requested if needed.   we can use cookies to save this but that is the only cookie i want.  please check if we are using cookies already and if we are, report them to meusing cookies).  
