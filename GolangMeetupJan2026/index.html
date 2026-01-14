@@ -249,6 +249,10 @@
             border: 1px solid #333;
         }
 
+        .slide-media-large img {
+            max-height: 230px;
+        }
+
         .code {
             font-family: 'SF Mono', 'Fira Code', monospace;
             background: #0d0d1a;
@@ -651,7 +655,7 @@
                 <a href="https://buttplug.io" target="_blank">
                     <img src="https://buttplug.io/assets/images/logo-38018d3af54f9cadbcfa380c51e63cb7.png" alt="buttplug.io">
                 </a>
-                <a href="https://github.com/NimbleMarkets/dbn-go/tree/main/cmd/dbn-go-mcp" target="_blank">
+                <a href="https://github.com/NimbleMarkets/dbn-go/raw/main/cmd/dbn-go-mcp/claude_get_cost.png" target="_blank">
                     <img src="https://github.com/NimbleMarkets/dbn-go/raw/main/cmd/dbn-go-mcp/claude_get_cost.png" alt="dbn-go-mcp demo">
                 </a>
                 <video src="https://github.com/user-attachments/assets/adb8e56f-178d-4646-9e0f-4fcf57614dea#t=22" autoplay loop muted></video>
@@ -700,9 +704,13 @@
                 <li>3D WebGL charts of cannabis data</li>
                 <li>Built between train stops</li>
             </ul>
-            <div class="slide-media">
-                <img src="images/dank-webchat.png" alt="dank-webchat">
-                <img src="images/dank-data-explorer.png" alt="dank-data-explorer">
+            <div class="slide-media slide-media-large">
+                <a href="images/dank-webchat.png" target="_blank">
+                    <img src="images/dank-webchat.png" alt="dank-webchat">
+                </a>
+                <a href="images/dank-data-explorer.png" target="_blank">
+                    <img src="images/dank-data-explorer.png" alt="dank-data-explorer">
+                </a>
             </div>
             <aside class="presenter-notes">
                 AntiGravity is my dev workflow tool. With the newer models, what used to take hours of iteration started working in one shot. That age verification page and chat interface that I struggled with before? Gemini one-shotted it. I even built a full DBA environment with DuckDB running in the browser and 3D charts - during a train commute. The capability jump was real.
@@ -720,11 +728,11 @@
                 <li><a href="https://github.com/ConAcademy/proving_parallelograms" target="_blank" class="highlight">Proving Parallelograms</a></li>
                 <li>Sprinkled inspiration about machine intelligence</li>
             </ul>
-            <div class="slide-media">
-                <a href="https://github.com/ConAcademy/quadratic_explorer" target="_blank">
+            <div class="slide-media slide-media-large">
+                <a href="images/quadratic-explorer.png" target="_blank">
                     <img src="images/quadratic-explorer.png" alt="Quadratic Explorer">
                 </a>
-                <a href="https://github.com/ConAcademy/proving_parallelograms" target="_blank">
+                <a href="images/proving-paralleograms.png" target="_blank">
                     <img src="images/proving-paralleograms.png" alt="Proving Parallelograms">
                 </a>
             </div>
@@ -741,11 +749,18 @@
         <div class="slide" data-timeline="91">
             <span class="date-tag">Late December 2025</span>
             <h2>Multimodal Debugging</h2>
-            <ul>
-                <li>Friend pasted error: bowtie shape instead of parallelogram</li>
-                <li>Fully automated pipeline:</li>
-            </ul>
-            <p style="font-size: 1.2em; margin-top: 1em; color: #888;">
+            <div class="slide-media slide-media-large" style="align-items: center; margin-top: 0.5em;">
+                <a href="images/proving-parallelograms-bug.png" target="_blank">
+                    <img src="images/proving-parallelograms-bug.png" alt="Bug: bowtie shape">
+                </a>
+                <div style="flex: 1; padding: 0 1em;">
+                    <p style="font-size: 1.1em; color: #888; font-style: italic; border-left: 3px solid #4a9eff; padding-left: 1em;">"A friend discovered a bug in this. Look at the attached picture, figure out what the bug is and correct it."</p>
+                </div>
+                <a href="images/proving-parallelograms-bugfix.png" target="_blank">
+                    <img src="images/proving-parallelograms-bugfix.png" alt="Fixed: proper parallelogram">
+                </a>
+            </div>
+            <p style="font-size: 1.1em; margin-top: 1em; color: #888;">
                 <span class="highlight">See image</span> →
                 <span class="highlight">Identify bug</span> →
                 <span class="highlight">Create fix</span> →
@@ -774,10 +789,16 @@
             <p style="font-size: 1.3em; margin-top: 0.5em;">
                 Structure configuration • Screw diameters • Materials selection • Stress point analysis
             </p>
-            <div class="slide-media">
-                <img src="images/WeaselToonBowUpgrade.png" alt="WeaselToon Bow Upgrade">
-                <img src="images/weaseltoon-engineering-1.png" alt="Vibe Engineering 1">
-                <img src="images/weaseltoon-engineering-2.png" alt="Vibe Engineering 2">
+            <div class="slide-media slide-media-large">
+                <a href="images/WeaselToonBowUpgrade.png" target="_blank">
+                    <img src="images/WeaselToonBowUpgrade.png" alt="WeaselToon Bow Upgrade">
+                </a>
+                <a href="images/weaseltoon-engineering-1.png" target="_blank">
+                    <img src="images/weaseltoon-engineering-1.png" alt="Vibe Engineering 1">
+                </a>
+                <a href="images/weaseltoon-engineering-2.png" target="_blank">
+                    <img src="images/weaseltoon-engineering-2.png" alt="Vibe Engineering 2">
+                </a>
             </div>
             <aside class="presenter-notes">
                 This was purely practical. I needed to improve something on my boat. I described the issue, shared pictures of the CAD drawings, and Claude helped me work through structural issues - what fasteners to use, material choices, where the stress points would be. Not writing code, just applying AI to a real engineering problem.

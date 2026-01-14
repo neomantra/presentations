@@ -152,3 +152,27 @@ we are continuing working on this presentation but we lost context.  review the 
 i got it working on github pages at https://neomantra.github.io/presentations/GolangMeetupJan2026/presentation.html
 i think we should rename presentation.html to index.html so it's picked up better.
 also it doesn't work well on mobile, can you see if you can improve that at all?
+
+---
+
+## 2026-01-14T04:17:50Z
+
+On multimodal debugging, put pictures of proving-parallelograms-bug.png and proving-parallelograms-bugfix.png .  in between put my prompt `a friend discovered a bug in this.  look at the attached picture, figure out what the bug is and correct it.`
+
+---
+
+## 2026-01-14T04:20:20Z
+
+i have added the  missing file  try again
+
+---
+
+## 2026-01-14T04:22:27Z
+
+on the antigravity+frontier models page, vibe coding for kids page, multimodal debugging page , and vibe boat engineering page, you can increase the image sizes by 15%
+
+---
+
+## 2026-01-14T04:24:36Z
+
+now each of the images on those pages and the mcp exploration page, i want clicking the image to open their respective image in a new window, i will use it to zoom in during the presentation.  do for all except for agentdank himself and the buttplug, they don't need to be linked
