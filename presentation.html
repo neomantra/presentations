@@ -29,31 +29,56 @@
             position: fixed;
             top: 20px;
             right: 20px;
-            width: 200px;
+            width: 320px;
             z-index: 100;
-            font-size: 11px;
+            font-size: 12px;
             color: #888;
         }
 
         .timeline-bar {
-            height: 6px;
+            height: 10px;
             background: #333;
-            border-radius: 3px;
-            margin-top: 4px;
-            overflow: hidden;
+            border-radius: 5px;
+            margin-top: 8px;
+            overflow: visible;
+            position: relative;
         }
 
         .timeline-progress {
             height: 100%;
             background: linear-gradient(90deg, #4a9eff, #00d4aa);
-            border-radius: 3px;
+            border-radius: 5px;
             transition: width 0.5s ease;
         }
 
         .timeline-labels {
             display: flex;
             justify-content: space-between;
-            margin-top: 2px;
+            margin-bottom: 4px;
+        }
+
+        .timeline-icons {
+            position: relative;
+            height: 28px;
+            margin-top: 6px;
+        }
+
+        .timeline-icon {
+            position: absolute;
+            font-size: 18px;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.4s, transform 0.3s;
+        }
+
+        .timeline-icon.active {
+            opacity: 1;
+            transform: translateX(-50%) scale(1.3);
+        }
+
+        .timeline-icon.passed {
+            opacity: 0.6;
+            transform: translateX(-50%) scale(1);
         }
 
         .slide {
@@ -246,13 +271,18 @@
 </head>
 <body>
     <div class="timeline">
-        <div>Nov 2024 → Jan 2026</div>
-        <div class="timeline-bar">
-            <div class="timeline-progress" id="timeline-progress"></div>
-        </div>
         <div class="timeline-labels">
             <span>Nov '24</span>
             <span>Jan '26</span>
+        </div>
+        <div class="timeline-bar">
+            <div class="timeline-progress" id="timeline-progress"></div>
+        </div>
+        <div class="timeline-icons">
+            <span class="timeline-icon" data-pos="0" style="left: 0%;" title="Multimodal">👀</span>
+            <span class="timeline-icon" data-pos="21" style="left: 21%;" title="Claude Code">✴️</span>
+            <span class="timeline-icon" data-pos="35" style="left: 35%;" title="MCP">🤖</span>
+            <span class="timeline-icon" data-pos="78" style="left: 78%;" title="Vibing">😵‍💫</span>
         </div>
     </div>
 
@@ -271,7 +301,7 @@
         <!-- Slide 1: Nov 2024 - TUI + Multimodal -->
         <div class="slide" data-timeline="8">
             <span class="date-tag">November 2024</span>
-            <h2>TUI + Multimodal Models</h2>
+            <h2>TUI + Multimodal Models 👀</h2>
             <ul>
                 <li>Built <span class="highlight">OllamaTea</span> - BubbleTea components for Ollama</li>
                 <li>Terminal UI meets local LLM inference</li>
@@ -286,10 +316,27 @@
             </aside>
         </div>
 
-        <!-- Slide 2: Apr 2025 - MCP Exploration -->
+        <!-- Slide 2: Feb 2025 - Claude Code -->
+        <div class="slide" data-timeline="21">
+            <span class="date-tag">February 24, 2025</span>
+            <h2>Claude Code Released ✴️</h2>
+            <ul>
+                <li>Anthropic ships <span class="highlight">Claude Code</span> - agentic coding in terminal</li>
+                <li>Full filesystem access, git integration, tool use</li>
+                <li>The beginning of practical AI-assisted development</li>
+            </ul>
+            <div class="takeaway">
+                <p>TUI re-acceptance revolution begins - terminals are cool again</p>
+            </div>
+            <aside class="presenter-notes">
+                February 2025 was a pivotal moment. Claude Code launched - an agentic coding assistant that lives in your terminal. This validated what I'd been exploring with OllamaTea: the terminal is a first-class environment for AI. It kicked off a broader TUI re-acceptance - people realizing that text interfaces and AI work beautifully together.
+            </aside>
+        </div>
+
+        <!-- Slide 3: Apr 2025 - MCP Exploration -->
         <div class="slide" data-timeline="35">
             <span class="date-tag">April 2025</span>
-            <h2>MCP Exploration</h2>
+            <h2>MCP Exploration 🤖</h2>
             <ul>
                 <li>Built MCP servers: DataBento, buttplug-mcp</li>
                 <li>Culminated in <span class="highlight">dank-mcp</span></li>
@@ -324,7 +371,7 @@
         <!-- Slide 4: Nov 2025 - New Models -->
         <div class="slide" data-timeline="78">
             <span class="date-tag">November 2025</span>
-            <h2>AntiGravity + Frontier Models</h2>
+            <h2>AntiGravity + Frontier Models 😵‍💫</h2>
             <ul>
                 <li><span class="highlight">Gemini 3 Pro</span> + <span class="highlight">Claude Opus 4.5</span></li>
                 <li>One-shot: AgentDank verification page + chat interface</li>
@@ -340,7 +387,7 @@
         <!-- Slide 5: Mid Dec 2025 - Vibe Coding -->
         <div class="slide" data-timeline="87">
             <span class="date-tag">Mid December 2025</span>
-            <h2>Vibe Coding for Kids</h2>
+            <h2>Vibe Coding for Kids 😵‍💫</h2>
             <ul>
                 <li>Substitute teaching - kids on Google Classroom</li>
                 <li>Live coded on the smartboard:</li>
@@ -378,7 +425,7 @@
         <!-- Slide 7: Late Dec 2025 - Boat Engineering -->
         <div class="slide" data-timeline="93">
             <span class="date-tag">Late December 2025</span>
-            <h2>Vibe Boat Engineering</h2>
+            <h2>Vibe Boat Engineering 😵‍💫</h2>
             <ul>
                 <li>Multimodal CAD assistance for pontoon boat improvement</li>
                 <li>Described issues + shared CAD drawings</li>
@@ -489,6 +536,17 @@
             // Update timeline
             const timeline = parseInt(slides[currentSlide].dataset.timeline) || 0;
             document.getElementById('timeline-progress').style.width = timeline + '%';
+
+            // Update icons
+            document.querySelectorAll('.timeline-icon').forEach(icon => {
+                const pos = parseInt(icon.dataset.pos);
+                icon.classList.remove('active', 'passed');
+                if (timeline >= pos && timeline < pos + 15) {
+                    icon.classList.add('active');
+                } else if (timeline > pos) {
+                    icon.classList.add('passed');
+                }
+            });
         }
 
         function nextSlide() {
