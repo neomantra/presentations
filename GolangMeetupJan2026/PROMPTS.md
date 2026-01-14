@@ -286,3 +286,57 @@ create a readme.md for humans, which describes the REPOSITORY and VIBE CODING A 
 ## 2026-01-14T13:59:27Z
 
 near the top, add a link to the PROMPTS.md and note to the reader that they can read the evolution there, or see the checkpoints at the commits page https://github.com/neomantra/presentations/commits/master/
+
+---
+
+## 2026-01-14T14:05:04Z
+
+create a QR code with the following link https://neomantra.github.io/presentations/GolangMeetupJan2026/    in the center should be the logo in images/neomantra-logo-blue.png and it should have a black border with a rounded rectangle enclosing it.  Underneath is a filled rounded rectangle with the word "Deck" underneatch in sans serif font and contrasting color consistent with the presentation.  place that qr code image in the images directory and add it to the main slide.
+
+---
+
+## 2026-01-14T14:11:24Z
+
+that's great, can you make the deck bubble below the QR code as wide as the qr code, the word Deck can be a bit bigger
+
+---
+
+## 2026-01-14T14:12:26Z
+
+deck should be double the size and bold and all caps
+
+---
+
+## 2026-01-14T14:21:36Z
+
+that's great.  also make a qrcode with the same logo but go to this URL https://github.com/neomantra/presentations/tree/master/GolangMeetupJan2026 and with the word "REPO" underneath
+
+---
+
+## 2026-01-14T14:23:14Z
+
+i've tested that and it looks great.  you can add it to the title slide, to the right of the other QR code.  leave some horizontal seperation from them to make it easier for cameras to disambiguate.   also add them to the final fin slide
+
+---
+
+## 2026-01-14T14:26:31Z
+
+on the title page, you can make them larger and centered beneath the contact information.  
+
+---
+
+## 2026-01-14T14:27:04Z
+
+make them 25% larger and add a little more horizontal separation
+
+---
+
+## 2026-01-14T14:27:34Z
+
+again, make them 25% larger and add a little more horizontal separation
+
+---
+
+## 2026-01-14T14:28:14Z
+
+that's great, now make them 260px and then apply all the same styling to the qr codes on the fin page
