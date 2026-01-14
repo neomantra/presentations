@@ -380,6 +380,14 @@
             text-decoration: none;
         }
 
+        .milestone-link {
+            display: none;
+        }
+
+        .milestone-link.visible {
+            display: inline;
+        }
+
         /* Mobile Responsive Styles */
         @media (max-width: 768px) {
             .timeline {
@@ -574,6 +582,7 @@
             <span class="timeline-icon" id="thumbs-down-icon" data-pos="50" style="left: 50%;" title="Vibe Coding Fail">👎</span>
             <span class="timeline-icon" data-pos="64" style="left: 64%;" title="Nano Banana">🍌</span>
             <span class="timeline-icon" data-pos="78" style="left: 78%;" title="Vibing">😵‍💫</span>
+            <span class="timeline-icon" data-pos="93" style="left: 88%;" title="Boat Engineering">🚤</span>
             <span class="timeline-icon" data-pos="100" style="left: 100%;" title="Renaissance">🚀</span>
         </div>
     </div>
@@ -637,7 +646,7 @@
                 </div>
                 <div class="milestone" data-milestone-timeline="16">
                     <div class="date">January 20, 2025</div>
-                    <div class="title">🧠 DeepSeek Releases R1</div>
+                    <div class="title">🧠 <a href="https://en.wikipedia.org/wiki/DeepSeek" target="_blank" class="highlight">DeepSeek</a> Releases R1</div>
                     <div class="desc">RL-trained reasoning model with open weights + research papers</div>
                 </div>
                 <div class="milestone" data-milestone-timeline="21">
@@ -647,13 +656,15 @@
                 </div>
                 <div class="milestone" data-milestone-timeline="64">
                     <div class="date">August 26, 2025</div>
-                    <div class="title">🍌 Google Releases Nano Banana</div>
+                    <div class="title">🍌 Google Releases <a href="https://blog.google/innovation-and-ai/products/nano-banana-pro/" target="_blank" class="highlight">Nano Banana</a></div>
                     <div class="desc">Fast, capable image generation model</div>
                 </div>
             </div>
-            <div class="slide-links">
-                <a href="https://modelcontextprotocol.io" target="_blank">modelcontextprotocol.io</a>
-                <a href="https://claude.ai/code" target="_blank">claude.ai/code</a>
+            <div class="slide-links" id="milestone-links">
+                <a href="https://modelcontextprotocol.io" target="_blank" class="milestone-link" data-milestone="1">modelcontextprotocol.io</a>
+                <a href="https://en.wikipedia.org/wiki/DeepSeek" target="_blank" class="milestone-link" data-milestone="2">en.wikipedia.org/wiki/DeepSeek</a>
+                <a href="https://claude.ai/code" target="_blank" class="milestone-link" data-milestone="3">claude.ai/code</a>
+                <a href="https://blog.google/innovation-and-ai/products/nano-banana-pro/" target="_blank" class="milestone-link" data-milestone="4">blog.google/.../nano-banana-pro</a>
             </div>
             <aside class="presenter-notes">
                 Quick industry context: MCP gave us the standard for tool use, DeepSeek showed open research can match frontier models, Claude Code brought agentic coding to the terminal, and Nano Banana democratized image generation. These set the stage for everything I built.
@@ -665,11 +676,11 @@
             <span class="date-tag">April 2025</span>
             <h2>MCP Exploration 🤖</h2>
             <ul>
-                <li>Built MCP servers:</li>
-                <li style="margin-left: 1em;"><a href="https://github.com/NimbleMarkets/dbn-go/tree/main/cmd/dbn-go-mcp" target="_blank" class="code">dbn-go-mcp</a> for DataBento market data</li>
-                <li style="margin-left: 1em;"><a href="https://github.com/agentdank/buttplug-mcp" target="_blank" class="code">buttplug-mcp</a> for device access</li>
+                <li>Built MCP servers with <a href="https://github.com/mark3labs/mcp-go" target="_blank" class="highlight">mcp-go</a>:</li>
+                <li style="margin-left: 1em;"><a href="https://github.com/NimbleMarkets/dbn-go/tree/main/cmd/dbn-go-mcp" target="_blank" class="highlight">dbn-go-mcp</a> for DataBento market data</li>
+                <li style="margin-left: 1em;"><a href="https://github.com/agentdank/buttplug-mcp" target="_blank" class="highlight">buttplug-mcp</a> for device access</li>
                 <li>Culminated in <a href="https://github.com/AgentDank/dank-mcp" target="_blank" class="highlight">dank-mcp</a></li>
-                <li>Cannabis dataset queries via DuckDB + Claude</li>
+                <li>Connect Claude with cannabis datasets via DuckDB SQL</li>
             </ul>
             <div class="slide-media">
                 <img src="images/AgentDankGravatar.png" alt="AgentDank">
@@ -830,7 +841,7 @@
             <span class="date-tag">Late December 2025</span>
             <h2>Vibe Boat Engineering 🚤</h2>
             <ul>
-                <li>Multimodal CAD assistance for pontoon boat improvement</li>
+                <li>Multi-modal mechanical design assistance for <a href="https://tinypontoonboats.com" target="_blank" class="highlight">pontoon boat</a> upgrade</li>
                 <li>Described issues + shared CAD drawings</li>
                 <li>AI helped with:</li>
             </ul>
@@ -847,6 +858,9 @@
                 <a href="images/weaseltoon-engineering-2.png" target="_blank">
                     <img src="images/weaseltoon-engineering-2.png" alt="Vibe Engineering 2">
                 </a>
+            </div>
+            <div class="slide-links">
+                <a href="https://tinypontoonboats.com" target="_blank">tinypontoonboats.com</a>
             </div>
             <aside class="presenter-notes">
                 This was purely practical. I needed to improve something on my boat. I described the issue, shared pictures of the CAD drawings, and Claude helped me work through structural issues - what fasteners to use, material choices, where the stress points would be. Not writing code, just applying AI to a real engineering problem.
@@ -919,10 +933,10 @@
         </div>
 
         <!-- Slide 12: Conclusion -->
-        <div class="slide final-slide" data-timeline="100">
-            <h2>Take this stuff and solve your problems with it!</h2>
+        <div class="slide final-slide" data-timeline="100" style="justify-content: center; align-items: center; text-align: center;">
+            <h2>Wield this magic!<br>Use it to solve your problems...</h2>
             <p style="margin-top: 2em; font-size: 1.3em; color: #888;">
-                Terminal UIs • MCP servers • Agentic loops • Multimodal debugging • CAD generation
+                Terminal UIs • MCP servers • Agentic loops • Multi-modal debugging • CAD generation
             </p>
             <div class="slide-links" style="position: relative; bottom: auto; left: auto; right: auto; margin-top: 3em; text-align: center;">
                 <a href="https://news.ycombinator.com/user?id=neomantra" target="_blank">news.ycombinator.com/user?id=neomantra</a>
@@ -1014,8 +1028,8 @@
                 eyeballs.style.display = '';
             }
 
-            // Hide plug on title slide (0) and TUI slide (1) - it's for Industry Milestones
-            if (currentSlide <= 1) {
+            // Hide plug until first milestone is revealed on Industry Milestones slide
+            if (currentSlide <= 1 || (milestones.length > 0 && milestoneStep === 0)) {
                 plug.style.display = 'none';
             } else {
                 plug.style.display = '';
@@ -1031,6 +1045,9 @@
                     }
                 });
 
+                // Update milestone links visibility
+                updateMilestoneLinks(currentMilestone);
+
                 // Set timeline based on current milestone or slide default
                 if (currentMilestone > 0 && currentMilestone <= milestones.length) {
                     const timeline = parseInt(milestones[currentMilestone - 1].dataset.milestoneTimeline) || 0;
@@ -1044,6 +1061,18 @@
             }
         }
 
+        function updateMilestoneLinks(count) {
+            const links = document.querySelectorAll('.milestone-link');
+            links.forEach(link => {
+                const milestoneNum = parseInt(link.dataset.milestone);
+                if (milestoneNum <= count) {
+                    link.classList.add('visible');
+                } else {
+                    link.classList.remove('visible');
+                }
+            });
+        }
+
         function nextSlide() {
             const milestones = slides[currentSlide].querySelectorAll('.milestone');
             if (milestones.length > 0 && currentMilestone < milestones.length) {
@@ -1051,6 +1080,11 @@
                 milestones[currentMilestone - 1].classList.add('visible');
                 const timeline = parseInt(milestones[currentMilestone - 1].dataset.milestoneTimeline) || 0;
                 updateTimeline(timeline);
+                updateMilestoneLinks(currentMilestone);
+                // Show plug when first milestone is revealed
+                if (currentMilestone >= 1) {
+                    document.getElementById('plug-icon').style.display = '';
+                }
             } else {
                 showSlide(currentSlide + 1, 0);
             }
@@ -1061,11 +1095,14 @@
             if (milestones.length > 0 && currentMilestone > 0) {
                 milestones[currentMilestone - 1].classList.remove('visible');
                 currentMilestone--;
+                updateMilestoneLinks(currentMilestone);
                 if (currentMilestone > 0) {
                     const timeline = parseInt(milestones[currentMilestone - 1].dataset.milestoneTimeline) || 0;
                     updateTimeline(timeline);
                 } else {
                     updateTimeline(parseInt(slides[currentSlide].dataset.timeline) || 0);
+                    // Hide plug when going back to no milestones
+                    document.getElementById('plug-icon').style.display = 'none';
                 }
             } else {
                 // Go to previous slide, showing all its milestones

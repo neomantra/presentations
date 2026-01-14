@@ -365,3 +365,33 @@ On the TUI+Multimodal Models slide, change the title to "Local LLM TUI + Multimo
 ## 2026-01-14T14:43:38Z
 
 on the Local LLM TUI slide, in its title change "Multimodal Models" to "Multi-modal Models".  In this slides timeline, the plug emoji is revealed, that is for the next slide page.  change the `dbn-go` styling to be the same as the OllamaTea and NTCharts links and you can unlink "DataBento"
+
+---
+
+## 2026-01-14T14:48:04Z
+
+on the industry milestones page, don't show the plug emoji until the first industry milestone reveal.  you can also add these links https://en.wikipedia.org/wiki/DeepSeek for DeepSeek and for nanobanana add this link https://blog.google/innovation-and-ai/products/nano-banana-pro/     change it so that the links at the bottom are revealed as the page advances
+
+---
+
+## 2026-01-14T14:55:56Z
+
+on the MCP Exploration page, change dbn-go-mcp and buttplug-mcp to have the same styling as dank-mcp.  Change  "Built MCP servers" to "Built MCP servers with mcp-go" and link mcp-go to https://github.com/mark3labs/mcp-go .  For "Cannabis dataset queries via DuckDB + Claude" put "Connect Claude with cannabis datasets via DuckDB SQL".
+
+---
+
+## 2026-01-14T15:00:29Z
+
+on Vibe Boat Engineering, add a timeline item with the same boat emoji.  Change "Multimodal CAD assistance" to "Multi-modal mechanical design assistance" and link "pontoon boat" to https://tinypontoonboats.com and add a link at the bottom and change "improvment" to "upgrade"
+
+---
+
+## 2026-01-14T15:02:12Z
+
+in the timeline the boat overlaps with the rocketship, can you slide it to the left a little bit even if it doesn't mathematically match the temporal proportion
+
+---
+
+## 2026-01-14T15:05:41Z
+
+On "Take this stuff and solve your problems with it!" rename it to "Wield this magic1\nUse it to solve your problems..."  also since it is a concluding slide you can vertically center it all more.
