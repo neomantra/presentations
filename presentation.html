@@ -195,6 +195,41 @@
             text-decoration: underline;
         }
 
+        .milestone {
+            opacity: 0;
+            transform: translateX(-20px);
+            transition: opacity 0.4s, transform 0.4s;
+            margin-bottom: 1.5em;
+        }
+
+        .milestone.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .milestone .date {
+            font-size: 0.85em;
+            color: #4a9eff;
+            margin-bottom: 0.2em;
+        }
+
+        .milestone .title {
+            font-size: 1.4em;
+            color: #eee;
+            margin-bottom: 0.2em;
+        }
+
+        .milestone .desc {
+            font-size: 1em;
+            color: #888;
+        }
+
+        .milestones-container {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5em;
+        }
+
         .code {
             font-family: 'SF Mono', 'Fira Code', monospace;
             background: #0d0d1a;
@@ -365,61 +400,37 @@
             </aside>
         </div>
 
-        <!-- Slide 2: Nov 2024 - MCP Announced -->
-        <div class="slide" data-timeline="4">
-            <span class="date-tag">November 25, 2024</span>
-            <h2>Anthropic Releases MCP 🔌</h2>
-            <ul>
-                <li><a href="https://modelcontextprotocol.io" target="_blank" class="highlight">Model Context Protocol</a> - open standard for AI tool use</li>
-                <li>Standardized way to connect LLMs to data and tools</li>
-                <li>Open specification with reference implementations</li>
-            </ul>
-            <div class="takeaway">
-                <p>The foundation for agentic AI workflows</p>
+        <!-- Slide 2: Industry Milestones -->
+        <div class="slide" data-timeline="4" data-milestones="4">
+            <h2>Industry Milestones</h2>
+            <div class="milestones-container">
+                <div class="milestone" data-milestone-timeline="4">
+                    <div class="date">November 25, 2024</div>
+                    <div class="title">🔌 Anthropic Releases <a href="https://modelcontextprotocol.io" target="_blank" class="highlight">MCP</a></div>
+                    <div class="desc">Open standard for connecting LLMs to data and tools</div>
+                </div>
+                <div class="milestone" data-milestone-timeline="16">
+                    <div class="date">January 20, 2025</div>
+                    <div class="title">🧠 DeepSeek Releases R1</div>
+                    <div class="desc">RL-trained reasoning model with open weights + research papers</div>
+                </div>
+                <div class="milestone" data-milestone-timeline="21">
+                    <div class="date">February 24, 2025</div>
+                    <div class="title">✴️ Anthropic Releases <a href="https://claude.ai/code" target="_blank" class="highlight">Claude Code</a></div>
+                    <div class="desc">Agentic coding in terminal — TUI re-acceptance begins</div>
+                </div>
+                <div class="milestone" data-milestone-timeline="64">
+                    <div class="date">August 26, 2025</div>
+                    <div class="title">🍌 Google Releases Nano Banana</div>
+                    <div class="desc">Fast, capable image generation model</div>
+                </div>
             </div>
             <div class="slide-links">
                 <a href="https://modelcontextprotocol.io" target="_blank">modelcontextprotocol.io</a>
-            </div>
-            <aside class="presenter-notes">
-                Just weeks into my TUI experiments, Anthropic released MCP - Model Context Protocol. An open standard for connecting AI models to external data and tools. This would become central to my work months later, but at the time I filed it away as interesting.
-            </aside>
-        </div>
-
-        <!-- Slide 3: Jan 2025 - DeepSeek R1 -->
-        <div class="slide" data-timeline="16">
-            <span class="date-tag">January 20, 2025</span>
-            <h2>DeepSeek Releases R1 🧠</h2>
-            <ul>
-                <li>Reasoning model trained with <span class="highlight">reinforcement learning</span></li>
-                <li>Fully <span class="highlight">open weights</span> release</li>
-                <li>Detailed research papers published</li>
-                <li>Showed RL could match frontier reasoning capabilities</li>
-            </ul>
-            <div class="takeaway">
-                <p>Open research accelerates the entire field</p>
-            </div>
-            <aside class="presenter-notes">
-                DeepSeek R1 was a watershed moment. A reasoning model that could compete with the best, trained using reinforcement learning, with fully open weights AND detailed research papers. This kind of openness accelerates everyone's understanding of what's possible.
-            </aside>
-        </div>
-
-        <!-- Slide 4: Feb 2025 - Claude Code -->
-        <div class="slide" data-timeline="21">
-            <span class="date-tag">February 24, 2025</span>
-            <h2>Claude Code Released ✴️</h2>
-            <ul>
-                <li>Anthropic ships <a href="https://claude.ai/code" target="_blank" class="highlight">Claude Code</a> - agentic coding in terminal</li>
-                <li>Full filesystem access, git integration, tool use</li>
-                <li>The beginning of practical AI-assisted development</li>
-            </ul>
-            <div class="takeaway">
-                <p>TUI re-acceptance revolution begins - terminals are cool again</p>
-            </div>
-            <div class="slide-links">
                 <a href="https://claude.ai/code" target="_blank">claude.ai/code</a>
             </div>
             <aside class="presenter-notes">
-                February 2025 was a pivotal moment. Claude Code launched - an agentic coding assistant that lives in your terminal. This validated what I'd been exploring with OllamaTea: the terminal is a first-class environment for AI. It kicked off a broader TUI re-acceptance - people realizing that text interfaces and AI work beautifully together.
+                Quick industry context: MCP gave us the standard for tool use, DeepSeek showed open research can match frontier models, Claude Code brought agentic coding to the terminal, and Nano Banana democratized image generation. These set the stage for everything I built.
             </aside>
         </div>
 
@@ -465,21 +476,7 @@
             </aside>
         </div>
 
-        <!-- Slide 5: Aug 2025 - Nano Banana -->
-        <div class="slide" data-timeline="64">
-            <span class="date-tag">August 26, 2025</span>
-            <h2>Google Releases Nano Banana 🍌</h2>
-            <ul>
-                <li>Breakthrough image generation model</li>
-                <li>Small, fast, and surprisingly capable</li>
-                <li>Democratized high-quality image generation</li>
-            </ul>
-            <aside class="presenter-notes">
-                Google's Nano Banana was a game-changer for image generation - small enough to run locally but with quality that rivaled much larger models. The name was whimsical but the capabilities were serious.
-            </aside>
-        </div>
-
-        <!-- Slide 6: Nov 2025 - New Models -->
+        <!-- Slide 5: Nov 2025 - New Models -->
         <div class="slide" data-timeline="78">
             <span class="date-tag">November 2025</span>
             <h2>AntiGravity + Frontier Models 😵‍💫</h2>
@@ -652,26 +649,19 @@
 
     <script>
         let currentSlide = 0;
+        let currentMilestone = 0;
         const slides = document.querySelectorAll('.slide');
         const totalSlides = slides.length;
 
         document.getElementById('total-slides').textContent = totalSlides;
 
-        function showSlide(n) {
-            slides.forEach(s => s.classList.remove('active'));
-            currentSlide = (n + totalSlides) % totalSlides;
-            slides[currentSlide].classList.add('active');
-            document.getElementById('current-slide').textContent = currentSlide + 1;
-
-            // Update timeline
-            const timeline = parseInt(slides[currentSlide].dataset.timeline) || 0;
+        function updateTimeline(timeline) {
             document.getElementById('timeline-progress').style.width = timeline + '%';
 
-            // Update icons
             document.querySelectorAll('.timeline-icon').forEach(icon => {
                 const pos = parseInt(icon.dataset.pos);
                 icon.classList.remove('active', 'passed');
-                if (timeline >= pos && timeline < pos + 15) {
+                if (timeline >= pos && timeline < pos + 10) {
                     icon.classList.add('active');
                 } else if (timeline > pos) {
                     icon.classList.add('passed');
@@ -679,12 +669,66 @@
             });
         }
 
+        function showSlide(n, milestoneStep = 0) {
+            slides.forEach(s => s.classList.remove('active'));
+            currentSlide = (n + totalSlides) % totalSlides;
+            slides[currentSlide].classList.add('active');
+            document.getElementById('current-slide').textContent = currentSlide + 1;
+
+            // Handle milestones
+            const milestones = slides[currentSlide].querySelectorAll('.milestone');
+            if (milestones.length > 0) {
+                currentMilestone = milestoneStep;
+                milestones.forEach((m, i) => {
+                    if (i < currentMilestone) {
+                        m.classList.add('visible');
+                    } else {
+                        m.classList.remove('visible');
+                    }
+                });
+
+                // Set timeline based on current milestone or slide default
+                if (currentMilestone > 0 && currentMilestone <= milestones.length) {
+                    const timeline = parseInt(milestones[currentMilestone - 1].dataset.milestoneTimeline) || 0;
+                    updateTimeline(timeline);
+                } else {
+                    updateTimeline(parseInt(slides[currentSlide].dataset.timeline) || 0);
+                }
+            } else {
+                currentMilestone = 0;
+                updateTimeline(parseInt(slides[currentSlide].dataset.timeline) || 0);
+            }
+        }
+
         function nextSlide() {
-            showSlide(currentSlide + 1);
+            const milestones = slides[currentSlide].querySelectorAll('.milestone');
+            if (milestones.length > 0 && currentMilestone < milestones.length) {
+                currentMilestone++;
+                milestones[currentMilestone - 1].classList.add('visible');
+                const timeline = parseInt(milestones[currentMilestone - 1].dataset.milestoneTimeline) || 0;
+                updateTimeline(timeline);
+            } else {
+                showSlide(currentSlide + 1, 0);
+            }
         }
 
         function prevSlide() {
-            showSlide(currentSlide - 1);
+            const milestones = slides[currentSlide].querySelectorAll('.milestone');
+            if (milestones.length > 0 && currentMilestone > 0) {
+                milestones[currentMilestone - 1].classList.remove('visible');
+                currentMilestone--;
+                if (currentMilestone > 0) {
+                    const timeline = parseInt(milestones[currentMilestone - 1].dataset.milestoneTimeline) || 0;
+                    updateTimeline(timeline);
+                } else {
+                    updateTimeline(parseInt(slides[currentSlide].dataset.timeline) || 0);
+                }
+            } else {
+                // Go to previous slide, showing all its milestones
+                const prevIndex = (currentSlide - 1 + totalSlides) % totalSlides;
+                const prevMilestones = slides[prevIndex].querySelectorAll('.milestone');
+                showSlide(prevIndex, prevMilestones.length);
+            }
         }
 
         function toggleNotes() {

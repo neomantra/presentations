@@ -62,3 +62,9 @@ also add a slide for deepseek r1 20 january 2025, using reinforcement learning a
 ## 2026-01-14T00:30:50Z
 
 honestly how long would it take to present this, don't make any changes, just give me a per slide estimate and a total
+
+---
+
+## 2026-01-14T01:31:50Z
+
+go ahead and condense all the corporate announcements, including nano banana, into a quick set of sections that advance on the same slide and expose their milestones as they go.  then we jump to my work with MCP servers.
