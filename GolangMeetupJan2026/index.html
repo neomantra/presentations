@@ -195,6 +195,13 @@
             text-decoration: none;
         }
 
+        /* Key phrases (not links) - italicized, different color */
+        .key-phrase {
+            color: #f0a500;
+            font-weight: 600;
+            font-style: italic;
+        }
+
         a.highlight:hover {
             text-decoration: underline;
         }
@@ -706,7 +713,7 @@
                 <video src="https://github.com/user-attachments/assets/adb8e56f-178d-4646-9e0f-4fcf57614dea#t=22" autoplay loop muted></video>
             </div>
             <div class="takeaway">
-                <p><span class="highlight">Learnings:</span> Tool descriptions are crucial. LLMs love structured markdown. APIs aren't always meant to be wrapped directly.</p>
+                <p><span class="key-phrase">Learnings:</span> Tool descriptions are crucial. LLMs love structured markdown. APIs aren't always meant to be wrapped directly.</p>
             </div>
             <div class="slide-links">
                 <a href="https://github.com/NimbleMarkets/dbn-go/tree/main/cmd/dbn-go-mcp" target="_blank">github.com/NimbleMarkets/dbn-go/cmd/dbn-go-mcp</a>
@@ -750,7 +757,7 @@
                 <li>Didn't concentrate on the code at all...</li>
             </ul>
             <div class="takeaway">
-                <p>After a few hours: nothing useful. Code I wasn't happy with. Felt <span class="highlight">behind my natural tempo</span>. Stopped — considering it <span class="highlight">not ready</span>.</p>
+                <p>After a few hours: nothing useful. Code I wasn't happy with. Felt <span class="key-phrase">behind my natural tempo</span>. Stopped — considering it <span class="key-phrase">not ready</span>.</p>
             </div>
             <aside class="presenter-notes">
                 Vibe coding was getting popular, and I was already leaning on Copilot and asking LLMs questions constantly. I tried to build an AgentDank website starting with an age verification screen, without really looking at the code. When I did look, I wasn't happy with it. After a few hours I had nothing useful and felt slower than my normal pace. I stopped, concluding the tools weren't ready yet.
@@ -762,7 +769,7 @@
             <span class="date-tag">November 2025</span>
             <h2>AntiGravity + Frontier Models 😵‍💫</h2>
             <ul>
-                <li><span class="highlight">Gemini 3 Pro</span> + <span class="highlight">Claude Opus 4.5</span></li>
+                <li><span class="key-phrase">Gemini 3 Pro</span> + <span class="key-phrase">Claude Opus 4.5</span></li>
                 <li>One-shot: AgentDank verification page + chat interface</li>
                 <li>One-shot: DBA environment with embedded DuckDB WASM</li>
                 <li>3D WebGL charts of cannabis data</li>
@@ -813,33 +820,37 @@
         <div class="slide" data-timeline="91">
             <span class="date-tag">Late December 2025</span>
             <h2>Multimodal Debugging</h2>
-            <p style="font-size: 1.3em; color: #ccc; margin-bottom: 0.3em;">Full debugging cycle from a screenshot</p>
-            <p style="font-size: 1.1em; color: #888; margin-bottom: 0.2em;">Simple input, harnessing:</p>
-            <ul style="margin-left: 2em; margin-bottom: 0.5em;">
-                <li style="font-size: 1em;"><span class="highlight">Multi-modal capability</span></li>
-                <li style="font-size: 1em;"><span class="highlight">World understanding</span></li>
-                <li style="font-size: 1em;"><span class="highlight">Tool calling</span></li>
-                <li style="font-size: 1em;"><span class="highlight">Agentic looping</span></li>
-            </ul>
+            <div style="display: flex; gap: 2em; align-items: flex-start;">
+                <div style="flex: 1;">
+                    <p style="font-size: 1.3em; color: #ccc; margin-bottom: 0.3em;">Full debugging cycle from a screenshot</p>
+                    <p style="font-size: 1.1em; color: #888; margin-bottom: 0.2em;">Simple input, harnessing:</p>
+                    <ul style="margin-left: 2em; margin-bottom: 0.5em;">
+                        <li style="font-size: 1em;"><span class="key-phrase">Multi-modal capability</span></li>
+                        <li style="font-size: 1em;"><span class="key-phrase">World understanding</span></li>
+                        <li style="font-size: 1em;"><span class="key-phrase">Tool calling</span></li>
+                        <li style="font-size: 1em;"><span class="key-phrase">Agentic looping</span></li>
+                    </ul>
+                </div>
+                <div style="flex: 1; padding: 1em;">
+                    <p style="font-size: 1.1em; color: #888; font-style: italic; border-left: 3px solid #4a9eff; padding-left: 1em;">"A friend discovered a bug in this. Look at the attached picture, figure out what the bug is and correct it."</p>
+                </div>
+            </div>
             <div class="slide-media slide-media-large" style="align-items: center; margin-top: 0.5em;">
                 <a href="images/proving-parallelograms-bug.png" target="_blank">
                     <img src="images/proving-parallelograms-bug.png" alt="Bug: bowtie shape">
                 </a>
-                <div style="flex: 1; padding: 0 1em;">
-                    <p style="font-size: 1.1em; color: #888; font-style: italic; border-left: 3px solid #4a9eff; padding-left: 1em;">"A friend discovered a bug in this. Look at the attached picture, figure out what the bug is and correct it."</p>
-                </div>
                 <a href="images/proving-parallelograms-bugfix.png" target="_blank">
                     <img src="images/proving-parallelograms-bugfix.png" alt="Fixed: proper parallelogram">
                 </a>
             </div>
             <p style="font-size: 1.1em; margin-top: 1em; color: #888; text-align: center;">
-                <span class="highlight">See image</span> →
-                <span class="highlight">Identify bug</span> →
-                <span class="highlight">Create fix</span> →
-                <span class="highlight">Write test</span> →
-                <span class="highlight">Run in Chrome</span> →
-                <span class="highlight">Screenshot</span> →
-                <span class="highlight">Report</span>
+                <span class="key-phrase">See image</span> →
+                <span class="key-phrase">Identify bug</span> →
+                <span class="key-phrase">Create fix</span> →
+                <span class="key-phrase">Write test</span> →
+                <span class="key-phrase">Run in Chrome</span> →
+                <span class="key-phrase">Screenshot</span> →
+                <span class="key-phrase">Report</span>
             </p>
             <div class="slide-links">
                 <a href="https://github.com/ConAcademy/proving_parallelograms" target="_blank">github.com/ConAcademy/proving_parallelograms</a>
@@ -883,16 +894,29 @@
         <!-- Slide 8: Jan 2026 - Swift to 3D -->
         <div class="slide" data-timeline="97">
             <span class="date-tag">January 2026</span>
-            <h2>Swift → 3D Model</h2>
+            <h2>Image → Swift Code → 3D Model → Image...</h2>
             <ul>
-                <li>Discovered <a href="https://github.com/tomasf/Cadova" target="_blank" class="highlight">Cadova</a> on HackerNews</li>
-                <li>Swift library for parametric 3D modeling → 3MF output</li>
-                <li>Realization: Swift as <span class="highlight">ground truth</span> for 3D models</li>
-                <li>Like how Claude generates DOCX or SVG...</li>
-                <li>Documented in <a href="https://github.com/ConAcademy/WeaselToonCadova" target="_blank" class="code">WeaselToonCadova</a> repo</li>
+                <li>Discovered <a href="https://github.com/tomasf/Cadova" target="_blank" class="highlight">Cadova</a>, a Swift library for parametric, 3D CSG modeling</li>
+                <li>Realization: Swift as <span class="key-phrase">ground truth</span> for 3D models</li>
+                <li>Like how Claude generates DOCX or SVG... this is Swift code → 3MF model</li>
+                <li>Documented in <a href="https://github.com/ConAcademy/WeaselToonCadova" target="_blank" class="highlight">WeaselToonCadova</a> repo</li>
             </ul>
             <div class="takeaway">
-                <p>Started with Claude Desktop, got serious with Claude Code</p>
+                <p>Started with Claude Desktop, then evolved to human-less agentic looping with Claude Code</p>
+            </div>
+            <div class="slide-media slide-media-large">
+                <a href="images/pontoon_prompt_1.png" target="_blank">
+                    <img src="images/pontoon_prompt_1.png" alt="Pontoon Prompt">
+                </a>
+                <a href="images/pontoon_code.png" target="_blank">
+                    <img src="images/pontoon_code.png" alt="Pontoon Swift Code">
+                </a>
+                <a href="images/pontoon_swift_first.jpg" target="_blank">
+                    <img src="images/pontoon_swift_first.jpg" alt="Pontoon First Render">
+                </a>
+                <a href="images/pontoon_swift_final.jpg" target="_blank">
+                    <img src="images/pontoon_swift_final.jpg" alt="Pontoon Final Render">
+                </a>
             </div>
             <div class="slide-links">
                 <a href="https://github.com/tomasf/Cadova" target="_blank">github.com/tomasf/Cadova</a>
@@ -907,12 +931,19 @@
         <div class="slide" data-timeline="100">
             <span class="date-tag">January 2026</span>
             <h2>LLM-assisted Renaissance 🚀</h2>
+            <ul>
+                <li>Now I am jacked in with multiple projects simultaneously</li>
+                <li>With multiple LLMs, multiple workflows, multiple tools</li>
+            </ul>
+            <div class="takeaway" style="margin-top: 1em; margin-bottom: 1em;">
+                <p>Unencumbered personal advancement, although not a panacea</p>
+            </div>
             <ul class="threads-grid">
                 <li><a href="https://github.com/NimbleMarkets/ntcharts/issues/7" target="_blank" class="highlight">NTCharts multimodal + terminal testing</a></li>
                 <li><a href="https://github.com/openresty/docker-openresty/issues/289" target="_blank" class="highlight">OSS devops: Travis → GitHub Actions</a></li>
-                <li>AgentDank <a href="https://github.com/AgentDank/dank-extract" target="_blank" class="code">dank-extract</a></li>
+                <li><a href="https://github.com/AgentDank/dank-extract" target="_blank" class="highlight">AgentDank dank-extract</a></li>
                 <li>Swift app for WeaselToonCadova loop</li>
-                <li>HyperCube Vision + mesh shaders</li>
+                <li>HyperCube Viewer on Vision Pro via Mesh Shading</li>
                 <li>booba: ghostty-web + BubbleTea</li>
                 <li>Business + financial planning</li>
                 <li><a href="https://github.com/neomantra/presentations/tree/master/GolangMeetupJan2026" target="_blank" class="highlight">This presentation</a></li>
@@ -935,7 +966,7 @@
                 <li>Wanted to make something for Fallthrough</li>
                 <li>Started with photo of hosts → iterate with AI</li>
                 <li>Fine-tuned on additional reference photos</li>
-                <li>Generated 3D model → <span class="highlight">printed it</span></li>
+                <li>Generated 3D model → <span class="key-phrase">printed it</span></li>
             </ul>
             <p style="font-size: 1.2em; margin-top: 1em; color: #888;">
                 Computational graphs → Models → Coordinate spaces → G-code → Physical artifact

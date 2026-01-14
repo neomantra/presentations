@@ -407,3 +407,70 @@ The mobile version got a little worse when you changed it before.  The top of th
 ## 2026-01-14T15:13:19Z
 
 you can make the qr code bigger, maybe max 60%.  the primary issue for them was the aspect ratio
+
+---
+
+## 2026-01-14T15:15:29Z
+
+can you review this again for time?  i have a 15 minute slot
+
+---
+
+## 2026-01-14T15:21:09Z
+
+We are now working on the Swift -> 3D Model page.   Change the title to "Photo -> Swift Code -> 3D Model".   Change WeaselToonCadova to the same link font we use for projects elsewhere.  Include its link at the bottom.  Change "Started with Claude Desktop, got serious with Claude Code" to "Started with Claude Desktop, then evolved  to human-less agentic looping with Claude Code".   While you do that, I'll get some images ready to put underneath.
+
+---
+
+## 2026-01-14T15:22:45Z
+
+change "Photo → Swift Code → 3D Model" to "Image -> Swift Code -> 3D Model -> Image..." to evoke the idea of a loop
+
+---
+
+## 2026-01-14T15:25:14Z
+
+In general, we have one style for links to projects that i like, on that page Cadova and WeaselToonCadova are examples.  But also we have "ground truth" styled, and i like that, but i think it should be different than links.  Create a distinct CSS style for that which is similar, but italicized and a different appropriate color.  go through the presentation and apply that styling to unlinked but key phrases (eg already styled)
+
+---
+
+## 2026-01-14T15:34:12Z
+
+we are adding these pictures to the bottom, with the same treatment as other pages.  from left to right, all in images folder, pontoon_prompt_1.png pontoon_code.png pontoon_swift_first.jpg pontoon_swift_final.png
+
+---
+
+## 2026-01-14T15:37:31Z
+
+let's merge the top two lines, "Discovered Cadova, a Swift library for parametric, 3D CSG modeling"
+On "Like how Claude generates DOCX or SVG..." "Like how Claude generates DOCX or SVG... this is Swift code -> 3MF model"
+
+---
+
+## 2026-01-14T15:39:01Z
+
+the right most image is pontoon_swift_final.jpg not .png
+
+---
+
+## 2026-01-14T15:41:48Z
+
+On LLM-assisted Renaissance, add a main bullet point "Now I am jacked in with multiple LLMs with multiple workflows with multiple projects simultaneously" " then another line "Unencumbered personal advancement, although not a panacea"  then leave some vertical whitespace for the different projects
+
+---
+
+## 2026-01-14T15:42:51Z
+
+on "multimodal debugging", let's move the quote "A friend discovered a bug in this. Look at the attached picture, figure out what the bug is and correct it."  to the right side of the bullet-point text content
+
+---
+
+## 2026-01-14T15:45:18Z
+
+On LLM-assisted renaissance, break the first line into two bullet points: "Now I am jacked in with multiple projects simultaneously" "With multiple LLMs, multiple workflows, multiple tools".  Then put the Unencumbered bullet point in the floating text boxes that other slides have.  that will be a good visual separation of the projects.
+
+---
+
+## 2026-01-14T15:47:35Z
+
+on that slide, fixup "dank-extract" to be a styled link.  change "HyperCube Vision + mesh shaders" to "HyperCube Viewer on Vision Pro via Mesh Shading"
