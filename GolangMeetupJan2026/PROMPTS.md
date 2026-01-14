@@ -592,3 +592,15 @@ i want to make it that it is only when you triple-tap (or if that's not possible
 ## 2026-01-14T17:23:34Z
 
 that's annoying too, because it can sometimes turn into a zoom -- what about tapping Notes and Full at the same time
+
+---
+
+## 2026-01-14T17:28:22Z
+
+Remove all the aspects of shaking it and just have the Full+Notes combo toggle the safe mode.  We don't need a setting dialog either.  
+
+---
+
+## 2026-01-14T17:30:14Z
+
+on the mcp server slide, in safe mode hide the agent dank movie too
