@@ -500,3 +500,21 @@ https://conacademy.github.io/proving_parallelograms/
 ## 2026-01-14T16:20:39Z
 
 On the Wield this magic page.  let's change the bottom tagline to highlight the key technologies: "Multi-modal Models * Tool Calling * Agentic Loops * Vibe Coding"
+
+---
+
+## 2026-01-14T16:24:36Z
+
+scan the presenter notes.  verify that they match the updated content of the page and apply any improvements you deem useful
+
+---
+
+## 2026-01-14T16:27:02Z
+
+and yet another review for time please
+
+---
+
+## 2026-01-14T16:47:20Z
+
+ on the Vibe Coding for Kids... fixup the linked bullet points so that the text goes to their GitHub Pages page and then add (repo) with a link to the GitHub repo, but leave the parentheses unlinked especially so they get different color
