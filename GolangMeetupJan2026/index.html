@@ -453,6 +453,12 @@
                 object-fit: contain;
             }
 
+            /* QR container flows to column on mobile */
+            .qr-container {
+                flex-direction: column !important;
+                gap: 20px !important;
+            }
+
             h1 {
                 font-size: 2em;
             }
@@ -641,7 +647,7 @@
             <p style="margin-top: 2em; color: #666;">NYC Golang Meetup | January 2026</p>
             <p style="color: #ccc; margin-top: 1em;">Evan Wies</p>
             <p style="color: #888; margin-top: 0.3em;">evan@neomantra.net · @neomantra</p>
-            <div style="margin-top: 1.5em; display: flex; justify-content: center; gap: 80px;">
+            <div class="qr-container" style="margin-top: 1.5em; display: flex; justify-content: center; gap: 80px;">
                 <a href="https://neomantra.github.io/presentations/GolangMeetupJan2026/" target="_blank">
                     <img src="images/qr-deck.png" alt="QR Code to Deck" style="height: 260px;">
                 </a>
@@ -649,6 +655,7 @@
                     <img src="images/qr-repo.png" alt="QR Code to Repo" style="height: 260px;">
                 </a>
             </div>
+            <p style="margin-top: 2em; font-size: 0.7em; color: #555;">Copyright © 2026 Evan Wies · MIT Licensed</p>
             <aside class="presenter-notes">
                 Welcome everyone. I'm going to share my journey over the past 14 months using LLMs - from early experiments with code generation and multi-modal models, to now using them for practical everyday work. Press 'N' to toggle these notes.
             </aside>
@@ -1064,7 +1071,7 @@
                 <div style="margin-top: 2em; font-family: 'Times New Roman', 'Georgia', serif; font-size: 1.2em; font-style: italic; color: #666; letter-spacing: 0.1em;">
                     — A Neomantra Production —
                 </div>
-                <div style="margin-top: 1.5em; display: flex; justify-content: center; gap: 80px;">
+                <div class="qr-container" style="margin-top: 1.5em; display: flex; justify-content: center; gap: 80px;">
                     <a href="https://neomantra.github.io/presentations/GolangMeetupJan2026/" target="_blank">
                         <img src="images/qr-deck.png" alt="QR Code to Deck" style="height: 260px;">
                     </a>
@@ -1072,6 +1079,7 @@
                         <img src="images/qr-repo.png" alt="QR Code to Repo" style="height: 260px;">
                     </a>
                 </div>
+                <p style="margin-top: 2em; font-size: 0.7em; color: #555;">Copyright © 2026 Evan Wies · MIT Licensed</p>
             </div>
         </div>
     </div>

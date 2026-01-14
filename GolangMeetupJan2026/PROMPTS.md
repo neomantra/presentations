@@ -604,3 +604,16 @@ Remove all the aspects of shaking it and just have the Full+Notes combo toggle t
 ## 2026-01-14T17:30:14Z
 
 on the mcp server slide, in safe mode hide the agent dank movie too
+
+---
+
+## 2026-01-14T17:32:46Z
+
+on the last page, the QR codes don't flow to a single column on mobile
+on the title page and final page, put a bottom note that the presentation itself is Copyright (C) 2026 Evan Wies and MIT Licensed
+
+---
+
+## 2026-01-14T17:35:53Z
+
+reformulate the readme given the current slide structure.  note and link the MIT License in Author section.  The @neomantra should go to my GitHub

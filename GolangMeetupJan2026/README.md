@@ -20,8 +20,11 @@ The presentation is a single `index.html` file with:
 - Custom slide navigation (arrow keys, swipe on mobile)
 - Timeline gauge showing progression from Nov 2024 to Jan 2026
 - Milestone icons that appear as the timeline advances
+- Progressive reveal on Industry Milestones slide
 - Presenter notes (press `N`)
 - Fullscreen mode (press `F`)
+- Safe mode for kid-friendly presentations (press `X` or tap Notes+Full simultaneously)
+- Responsive design with iOS safe area support
 - iOS "Add to Home Screen" support for true fullscreen on mobile
 
 No frameworks. No build step. Just HTML/CSS/JS generated through conversation.
@@ -40,15 +43,17 @@ No frameworks. No build step. Just HTML/CSS/JS generated through conversation.
 | 8 | Mid Dec 2025 | Vibe Coding for Kids |
 | 9 | Late Dec 2025 | Multimodal Debugging |
 | 10 | Late Dec 2025 | Vibe Boat Engineering |
-| 11 | Jan 2026 | Swift to 3D Model (Cadova) |
+| 11 | Jan 2026 | Image → Swift Code → 3D Model → Image... (Cadova) |
 | 12 | Jan 2026 | LLM-assisted Renaissance |
-| 13 | — | Conclusion |
+| 13 | — | Wield this magic! |
 | 14 | — | FIN |
 
 ## Author
 
 **Evan Wies**
-evan@neomantra.net · [@neomantra](https://news.ycombinator.com/user?id=neomantra)
+evan@neomantra.net · [@neomantra](https://github.com/neomantra)
+
+This presentation is Copyright © 2026 Evan Wies and released under the [MIT License](LICENSE.txt).
 
 ## Related Projects
 
