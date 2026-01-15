@@ -982,3 +982,33 @@ it's betterish... fine for now.  can you link the agentdank video to show in a n
 ## 2026-01-15T22:19:09Z
 
 on mobile the FIN slide has weird flow and large images for the qr codes.
+
+---
+
+## 2026-01-15T22:21:37Z
+
+on mobile, if i accidentally zoom in with a double-tap, when i double-tap out, it doesn't have correct formatting, with much of the content at the top  or clipped above 
+
+---
+
+## 2026-01-15T22:23:59Z
+
+on mobile, on the first page, clicking near the qr code, it is like the whole row activates a click?  i only want it when the image is clicked
+
+---
+
+## 2026-01-15T22:25:33Z
+
+on mcp exploration, on mobile, you can fix at two images per row
+
+---
+
+## 2026-01-15T22:27:21Z
+
+remove booba,  on the LLM-ASsisted Renaissance page
+
+---
+
+## 2026-01-15T22:30:01Z
+
+on mobile, move the "Wield this magic" and "FIN" up a little bit, with the rest following it in same proportion

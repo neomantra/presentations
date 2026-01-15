@@ -28,6 +28,8 @@
             padding-bottom: env(safe-area-inset-bottom);
             padding-left: env(safe-area-inset-left);
             padding-right: env(safe-area-inset-right);
+            /* Disable double-tap zoom on mobile */
+            touch-action: manipulation;
         }
 
         .slide-container {
@@ -503,10 +505,22 @@
                 justify-content: center;
             }
 
+            /* Constrain QR link clickable area to just the image */
+            .qr-container a {
+                display: inline-block;
+                line-height: 0;
+            }
+
             /* FIN slide adjustments */
             .fin-text {
                 font-size: 4em !important;
                 letter-spacing: 0.2em !important;
+            }
+
+            /* Push centered slides (Wield/FIN) up on mobile */
+            .final-slide,
+            .slide[style*="justify-content: center"] {
+                padding-bottom: 150px !important;
             }
 
             h1 {
@@ -680,8 +694,8 @@
             .slide-media > img,
             .slide-media > video,
             .slide-media > div {
-                flex: 0 0 100%;
-                max-width: 100%;
+                flex: 0 0 calc(50% - 5px);
+                max-width: calc(50% - 5px);
             }
 
             .slide-media .stacked-images {
@@ -1103,10 +1117,9 @@
                 <li class="nsfw-only"><a href="https://github.com/AgentDank/dank-extract" target="_blank" class="highlight">AgentDank dank-extract</a></li>
                 <li>Swift app for WeaselToonCadova loop</li>
                 <li><a href="https://github.com/openresty/docker-openresty/issues/289" target="_blank" class="highlight">OSS devops: Travis → GitHub Actions</a></li>
-                <li>booba: ghostty-web + BubbleTea</li>
                 <li><a href="https://conacademy.github.io/BuffaloBuffalo/" target="_blank" class="highlight">BuffaloBuffalo</a></li>
-                <li>Business + financial planning</li>
                 <li><a href="https://github.com/neomantra/presentations/tree/master/GolangMeetupJan2026" target="_blank" class="highlight">This Presentation</a>... (<a href="https://github.com/neomantra/presentations/blob/master/GolangMeetupJan2026/PROMPTS.md" target="_blank" class="highlight">PROMPTS.md</a>)</li>
+                <li>Business + financial planning</li>
             </ul>
             <div class="slide-links">
                 <a href="https://github.com/NimbleMarkets" target="_blank">github.com/NimbleMarkets</a>
