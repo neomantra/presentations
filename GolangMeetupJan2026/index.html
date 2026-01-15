@@ -393,6 +393,24 @@
             overflow-y: auto;
         }
 
+        body.show-notes-large .presenter-notes {
+            display: block;
+            position: fixed;
+            bottom: 60px;
+            left: 20px;
+            right: 20px;
+            top: 50%;
+            background: #000;
+            border: 2px solid #4a9eff;
+            padding: 30px;
+            font-size: 28px;
+            line-height: 1.5;
+            color: #ccc;
+            border-radius: 12px;
+            max-height: none;
+            overflow-y: auto;
+        }
+
         .link {
             color: #4a9eff;
             text-decoration: none;
@@ -1353,7 +1371,22 @@
         }
 
         function toggleNotes() {
-            document.body.classList.toggle('show-notes');
+            const body = document.body;
+            const btn = document.getElementById('notes-btn');
+            if (!body.classList.contains('show-notes') && !body.classList.contains('show-notes-large')) {
+                // Off → Small
+                body.classList.add('show-notes');
+                btn.textContent = 'Notes (N)';
+            } else if (body.classList.contains('show-notes')) {
+                // Small → Large
+                body.classList.remove('show-notes');
+                body.classList.add('show-notes-large');
+                btn.textContent = 'NOTES (N)';
+            } else {
+                // Large → Off
+                body.classList.remove('show-notes-large');
+                btn.textContent = 'Notes (N)';
+            }
         }
 
         function toggleFullscreen() {

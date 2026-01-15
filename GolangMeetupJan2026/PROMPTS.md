@@ -880,3 +880,9 @@ make it larger, to be read from far away,  and include the https://
 ## 2026-01-15T00:04:47Z
 
 on the industry  page, after all the event reveals have the following info box: Tools (hammer emoji), Thinking (brain emoji), Agentic Environments (robot emoji), and Multi-Modal World Understanding (eyes emoji)
+
+---
+
+## 2026-01-15T00:50:19Z
+
+let's make the notes button tri-state.  the first N shows the current button, the next N makes a larger Notes box with a larger font, this is for the presenter to look at on another device or window and not have to squint
