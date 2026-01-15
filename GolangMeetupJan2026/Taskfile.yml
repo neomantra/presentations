@@ -1,0 +1,153 @@
+version: '3'
+
+vars:
+  PORT: '{{.PORT | default "8080"}}'
+
+tasks:
+  serve:
+    desc: Serve the presentation on a local HTTP server
+    cmds:
+      - echo "Serving at http://localhost:{{.PORT}}"
+      - echo "For Tailscale access, use http://$(hostname):{{.PORT}}"
+      - python3 -m http.server {{.PORT}}
+
+  validate:
+    desc: Run all validation checks
+    cmds:
+      - task: validate:html
+      - task: validate:js
+      - task: validate:links
+
+  validate:html:
+    desc: Check HTML for syntax errors
+    cmds:
+      - |
+        echo "Checking HTML syntax..."
+        python3 << 'PYEOF'
+        import html.parser
+        import sys
+
+        class ValidationParser(html.parser.HTMLParser):
+            def __init__(self):
+                super().__init__()
+                self.errors = []
+                self.tag_stack = []
+                self.void_elements = {'area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'link', 'meta', 'param', 'source', 'track', 'wbr'}
+
+            def handle_starttag(self, tag, attrs):
+                if tag not in self.void_elements:
+                    self.tag_stack.append((tag, self.getpos()))
+
+            def handle_endtag(self, tag):
+                if tag in self.void_elements:
+                    return
+                if not self.tag_stack:
+                    self.errors.append(f'Unexpected closing tag </{tag}> at line {self.getpos()[0]}')
+                elif self.tag_stack[-1][0] != tag:
+                    self.errors.append(f'Mismatched tag: expected </{self.tag_stack[-1][0]}>, got </{tag}> at line {self.getpos()[0]}')
+                else:
+                    self.tag_stack.pop()
+
+        with open('index.html', 'r') as f:
+            content = f.read()
+
+        parser = ValidationParser()
+        try:
+            parser.feed(content)
+            if parser.errors:
+                for err in parser.errors:
+                    print(f'ERROR: {err}')
+                sys.exit(1)
+            if parser.tag_stack:
+                for tag, pos in parser.tag_stack:
+                    print(f'ERROR: Unclosed tag <{tag}> opened at line {pos[0]}')
+                sys.exit(1)
+            print('HTML syntax OK')
+        except Exception as e:
+            print(f'ERROR: {e}')
+            sys.exit(1)
+        PYEOF
+
+  validate:js:
+    desc: Check JavaScript for syntax errors
+    cmds:
+      - |
+        echo "Checking JavaScript syntax..."
+        python3 << 'PYEOF'
+        import re
+        import subprocess
+        import sys
+        import tempfile
+
+        with open('index.html', 'r') as f:
+            content = f.read()
+
+        # Extract JavaScript from script tags
+        scripts = re.findall(r'<script[^>]*>(.*?)</script>', content, re.DOTALL)
+
+        if not scripts:
+            print('No inline JavaScript found')
+            sys.exit(0)
+
+        # Combine all scripts
+        js_content = '\n'.join(scripts)
+
+        # Write to temp file and check with Node
+        with tempfile.NamedTemporaryFile(mode='w', suffix='.js', delete=False) as f:
+            f.write(js_content)
+            temp_path = f.name
+
+        try:
+            result = subprocess.run(['node', '--check', temp_path], capture_output=True, text=True)
+            if result.returncode != 0:
+                print('JavaScript syntax errors:')
+                print(result.stderr)
+                sys.exit(1)
+            print('JavaScript syntax OK')
+        except FileNotFoundError:
+            print('SKIP: Node.js not installed, cannot validate JavaScript')
+        finally:
+            import os
+            os.unlink(temp_path)
+        PYEOF
+
+  validate:links:
+    desc: Check for broken internal links and missing images
+    cmds:
+      - |
+        echo "Checking internal links and images..."
+        python3 << 'PYEOF'
+        import re
+        import os
+        import sys
+
+        with open('index.html', 'r') as f:
+            content = f.read()
+
+        errors = []
+
+        # Find local image sources (not http/https/data)
+        img_srcs = re.findall(r'<img[^>]+src=["\']([^"\']+)["\']', content)
+        for src in img_srcs:
+            if not src.startswith(('http://', 'https://', 'data:')):
+                if not os.path.exists(src):
+                    errors.append(f'Missing image: {src}')
+
+        # Find local href links (not http/https/mailto/javascript/#)
+        hrefs = re.findall(r'href=["\']([^"\']+)["\']', content)
+        for href in hrefs:
+            if not href.startswith(('http://', 'https://', 'mailto:', 'javascript:', '#')):
+                if not os.path.exists(href):
+                    errors.append(f'Missing file: {href}')
+
+        if errors:
+            for err in errors:
+                print(f'ERROR: {err}')
+            sys.exit(1)
+        print('All local links and images OK')
+        PYEOF
+
+  check:
+    desc: Alias for validate
+    cmds:
+      - task: validate

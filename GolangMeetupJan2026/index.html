@@ -465,11 +465,12 @@
 
         /* Mobile Responsive Styles */
         @media (max-width: 768px) {
+            /* Use max() fallbacks for iOS Safari where env() may return 0 in browsing mode */
             .timeline {
                 width: calc(100% - 40px - env(safe-area-inset-left) - env(safe-area-inset-right));
                 left: calc(20px + env(safe-area-inset-left));
                 right: calc(20px + env(safe-area-inset-right));
-                top: calc(10px + env(safe-area-inset-top));
+                top: 20px;
             }
 
             .timeline-icon {
@@ -484,21 +485,28 @@
             }
 
             .slide.active {
-                padding-top: calc(80px + env(safe-area-inset-top));
+                padding-top: 100px !important;
                 overflow-y: auto;
             }
 
-            /* QR codes on mobile - maintain aspect ratio */
+            /* QR codes on mobile - smaller size */
             .slide img[src*="qr-"] {
                 height: auto !important;
-                max-width: 60%;
+                max-width: 120px !important;
                 object-fit: contain;
             }
 
-            /* QR container flows to column on mobile */
+            /* QR container flows to row on mobile, smaller gap */
             .qr-container {
-                flex-direction: column !important;
-                gap: 20px !important;
+                flex-direction: row !important;
+                gap: 30px !important;
+                justify-content: center;
+            }
+
+            /* FIN slide adjustments */
+            .fin-text {
+                font-size: 4em !important;
+                letter-spacing: 0.2em !important;
             }
 
             h1 {
@@ -577,8 +585,12 @@
             }
 
             .nav button {
-                padding: 8px 12px;
-                font-size: 12px;
+                padding: 12px 18px;
+                font-size: 14px;
+            }
+
+            #fullscreen-btn {
+                display: none;
             }
 
             .bottom-left {
@@ -643,7 +655,7 @@
             }
 
             .slide.active {
-                padding-top: calc(70px + env(safe-area-inset-top));
+                padding-top: 90px !important;
             }
 
             h1 {
@@ -833,7 +845,9 @@
                 <a href="https://github.com/NimbleMarkets/dbn-go/raw/main/cmd/dbn-go-mcp/claude_get_cost.png" target="_blank">
                     <img src="https://github.com/NimbleMarkets/dbn-go/raw/main/cmd/dbn-go-mcp/claude_get_cost.png" alt="dbn-go-mcp demo">
                 </a>
-                <video src="https://github.com/user-attachments/assets/adb8e56f-178d-4646-9e0f-4fcf57614dea#t=22" autoplay loop muted class="nsfw-only"></video>
+                <a href="https://github.com/user-attachments/assets/adb8e56f-178d-4646-9e0f-4fcf57614dea" target="_blank" class="nsfw-only">
+                    <video src="https://github.com/user-attachments/assets/adb8e56f-178d-4646-9e0f-4fcf57614dea#t=22" autoplay loop muted></video>
+                </a>
             </div>
             <div class="takeaway">
                 <p><span class="key-phrase">Learnings:</span> Tool descriptions are crucial. LLMs love structured markdown. APIs aren't always meant to be wrapped directly.</p>
@@ -1169,7 +1183,7 @@
         <!-- Slide 13: FIN -->
         <div class="slide" data-timeline="100" style="justify-content: center; align-items: center; text-align: center;">
             <div style="position: relative;">
-                <div style="font-family: 'Times New Roman', 'Georgia', serif; font-size: 8em; font-style: italic; font-weight: bold; letter-spacing: 0.3em; color: #d4af37; text-shadow: 2px 2px 4px rgba(0,0,0,0.5), 0 0 40px rgba(212,175,55,0.3);">
+                <div class="fin-text" style="font-family: 'Times New Roman', 'Georgia', serif; font-size: 8em; font-style: italic; font-weight: bold; letter-spacing: 0.3em; color: #d4af37; text-shadow: 2px 2px 4px rgba(0,0,0,0.5), 0 0 40px rgba(212,175,55,0.3);">
                     FIN
                 </div>
                 <div style="margin-top: -0.5em; font-family: 'Times New Roman', 'Georgia', serif; font-size: 1.5em; letter-spacing: 0.5em; color: #888;">
@@ -1527,6 +1541,18 @@
                 }
             }
         }
+
+        // Double-tap on bottom-left toggles both safe mode and fallthrough mode
+        let lastBottomLeftTap = 0;
+        document.querySelector('.bottom-left').addEventListener('touchend', (e) => {
+            const now = Date.now();
+            if (now - lastBottomLeftTap < 300) {
+                e.preventDefault();
+                toggleSafeMode();
+                toggleFallthroughMode();
+            }
+            lastBottomLeftTap = now;
+        });
 
         showSlide(0);
     </script>

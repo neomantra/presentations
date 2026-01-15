@@ -898,3 +898,87 @@ on the LLM renaissance slide, add BuffaloBuffalo (https://conacademy.github.io/B
 ## 2026-01-15T16:05:08Z
 
 on the LMM-ASsisted slide, swap the positions of HyperCube and OSS Devops, then all linked parts will be on the same side
+
+---
+
+## 2026-01-15T21:02:20Z
+
+we are going to work on mobile a bit.  is there a way to get all the content below the apple status bar in liquid ios 26?  it only works well when i make it a Home Page app, which i don't want to do
+
+---
+
+## 2026-01-15T21:08:37Z
+
+i want to serve this up so that i can test with my phone over Tailscale, whip a webserver task up for me
+
+---
+
+## 2026-01-15T21:47:42Z
+
+make a Taskfile task for serving that.  Also include any simple correctness tests that make sense (perhaps pre-flighting the html/js for errors)
+
+---
+
+## 2026-01-15T21:56:39Z
+
+that worked well with the spacing but now there is too much gap at the top, can you reduce it?  is this going to be a problem on every device?
+
+---
+
+## 2026-01-15T21:58:27Z
+
+you can reduce it to another 20px.   also in mobile we don't need a Fullscreen button?
+
+---
+
+## 2026-01-15T22:01:08Z
+
+for mobile, make the prev/next buttons a bit bigger.  we also need to work on the F and G shortcuts for it... how about on mobile, double-tapping the lower left page count area toggles both modes simultaneously
+
+---
+
+## 2026-01-15T22:03:07Z
+
+on the industry milestone and other pages, it does not have the same positioning treatment that the first couple pages have?
+
+---
+
+## 2026-01-15T22:07:23Z
+
+but it is consistent to the wrong spot!  now it is all at the top covered by the status bar, rather than under that status bar.  
+
+---
+
+## 2026-01-15T22:08:47Z
+
+go back to two steps ago, this is not working well
+
+---
+
+## 2026-01-15T22:10:59Z
+
+the content is way far up at the top, maybe you need to go back further, or perhaps take a step back to examine the problem
+
+---
+
+## 2026-01-15T22:12:24Z
+
+that's a better state, you can move the timeline bar up more
+
+---
+
+## 2026-01-15T22:14:29Z
+
+i set the timeline top to 20px, i like it there, but the rest of the page isn't anchored correctly, it's going way to the top
+
+---
+
+## 2026-01-15T22:16:45Z
+
+it's betterish... fine for now.  can you link the agentdank video to show in a new window?
+
+---
+
+## 2026-01-15T22:19:09Z
+
+on mobile the FIN slide has weird flow and large images for the qr codes.
