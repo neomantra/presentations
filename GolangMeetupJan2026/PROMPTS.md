@@ -874,3 +874,9 @@ on the title page and final page, add the full URL https://neomantra.github.io/p
 ## 2026-01-14T23:01:13Z
 
 make it larger, to be read from far away,  and include the https://
+
+---
+
+## 2026-01-15T00:04:47Z
+
+on the industry  page, after all the event reveals have the following info box: Tools (hammer emoji), Thinking (brain emoji), Agentic Environments (robot emoji), and Multi-Modal World Understanding (eyes emoji)
