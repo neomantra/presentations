@@ -886,3 +886,15 @@ on the industry  page, after all the event reveals have the following info box: 
 ## 2026-01-15T00:50:19Z
 
 let's make the notes button tri-state.  the first N shows the current button, the next N makes a larger Notes box with a larger font, this is for the presenter to look at on another device or window and not have to squint
+
+---
+
+## 2026-01-15T15:12:03Z
+
+on the LLM renaissance slide, add BuffaloBuffalo (https://conacademy.github.io/BuffaloBuffalo/) 
+
+---
+
+## 2026-01-15T16:05:08Z
+
+on the LMM-ASsisted slide, swap the positions of HyperCube and OSS Devops, then all linked parts will be on the same side
